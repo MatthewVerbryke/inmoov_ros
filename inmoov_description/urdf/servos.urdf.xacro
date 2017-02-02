@@ -1,0 +1,348 @@
+<?xml version="1.0"?>
+<robot>
+
+
+<!--GAZEBO_ROS_CONTROL PLUGIN-->
+
+
+<gazebo>
+  <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+    <robotNamespace>/inmoov</robotNamespace>
+  </plugin>
+</gazebo>
+
+
+
+<!--TRANSMISSION PLUGINS-->
+
+	<!--Head & Face-->
+
+<transmission name="head_tran1">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="head_tilt">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="headmotor1">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="head_tran2">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="head_updown">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="headmotor2">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="head_tran3">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="head_leftright">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="headmotor3">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="jaw_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="jaw">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="jawmotor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="eye_tran1">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="eyes_updown">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="eyemotor1">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="eye_tran2">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="eye_leftright">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="eyemotor2">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+
+
+	<!--Torso-->
+
+<transmission name="waist_tran1">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="waist_rotate">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="waistmotor1">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="waist_tran2">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="waist_lean">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="waistmotor2">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+
+
+	<!--Right Arm-->
+
+<transmission name="rshoulder_tran1">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_shoulder_side">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rshouldermotor1">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rshoulder_tran2">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_shoulder_up">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rshouldermotor2">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rbicep_tran1">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_bicep_rotate">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rbicepmotor1">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rbicep_tran2">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_bicep">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rbicepmotor2">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+
+
+	<!--Left Arm-->
+
+<transmission name="lshoulder_tran1">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_shoulder_side">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lshouldermotor1">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="lshoulder_tran2">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_shoulder_up">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lshouldermotor2">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="lbicep_tran1">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_bicep_rotate">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lbicepmotor1">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="lbicep_tran2">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_bicep">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lbicepmotor2">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+
+
+	<!--Right Hand-->
+
+<transmission name="rthumb_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_thumb">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rthumbmotor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rindex_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_index">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rindexmotor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rmiddle_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_middle">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rmiddlemotor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rring_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_ring">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rringmotor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rpinky_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_pinky">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rpinkymotor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rwrist_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_hand">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rwristmotor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+
+
+	<!--Left Hand-->
+
+<transmission name="lthumb_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_thumb">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lthumbmotor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="lindex_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_index">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lindexmotor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="lmiddle_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_middle">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lmiddlemotor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="lring_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_ring">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lringmotor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="lpinky_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_pinky">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lpinkymotor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="lwrist_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_hand">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lwristmotor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

@@ -4,6 +4,11 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <robot name="inmoov" xmlns:xacro="http://ros.org/wiki/xacro">
+  <link name="world"/>
+  <joint name="fixed" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
   <link name="base_link">
     <visual>
       <geometry>
@@ -14,6 +19,12 @@
         <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.11" radius="0.26"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.055"/>
+    </collision>
   </link>
   <joint name="base_to_pedestal" type="fixed">
     <parent link="base_link"/>
@@ -30,6 +41,17 @@
         <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.94" radius="0.0254"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.58"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0.58"/>
+      <mass value="10"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
   </link>
   <link name="head_tilt">
     <visual>
@@ -41,6 +63,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/virtual.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <joint name="pedestal_to_mid_stomach" type="fixed">
     <parent link="pedestal"/>
@@ -57,6 +90,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/mid_stomach.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 1.152"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 1.152"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="disk">
     <visual>
@@ -68,6 +112,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/disk.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0.046 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0.046 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="top_stomach">
     <visual>
@@ -79,6 +134,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/top_stomach.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="torso">
     <visual>
@@ -90,6 +156,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/torso.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="kinect">
     <visual>
@@ -101,6 +178,17 @@
         <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/kinectone.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="chestplate">
     <visual>
@@ -112,6 +200,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/chest.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <joint name="waist_rotate" type="revolute">
     <axis xyz="0 0 1"/>
@@ -119,6 +218,7 @@
     <origin rpy="0 0 0" xyz="0 0 1.152"/>
     <parent link="mid_stomach"/>
     <child link="top_stomach"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="disk" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0.09"/>
@@ -131,6 +231,7 @@
     <origin rpy="0 0 0" xyz="0 0 0.11"/>
     <parent link="top_stomach"/>
     <child link="torso"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="chestplate" type="fixed">
     <origin rpy="0 0 0" xyz="0 0.039 0.025"/>
@@ -148,6 +249,7 @@
     <origin rpy="0 0 0" xyz="-0.001 -0.0315 0.4551"/>
     <parent link="torso"/>
     <child link="head_tilt"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="head_updown" type="revolute">
     <axis xyz="1 0 0"/>
@@ -155,6 +257,7 @@
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="head_tilt"/>
     <child link="head_base"/>
+    <dynamics damping="0.7"/>
   </joint>
   <link name="head_base">
     <visual>
@@ -166,6 +269,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/head_base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="head">
     <visual>
@@ -177,6 +291,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/head.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="jaw">
     <visual>
@@ -188,6 +313,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/jaw.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="skull">
     <visual>
@@ -199,6 +335,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/skull.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0.001 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.001 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_ear">
     <visual>
@@ -210,6 +357,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/earleftv1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_ear">
     <visual>
@@ -221,6 +379,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/earrightv1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <joint name="head_leftright" type="revolute">
     <axis xyz="0 0 1"/>
@@ -228,6 +397,7 @@
     <origin rpy="0 0 0" xyz="0 0 0.0245"/>
     <parent link="head_base"/>
     <child link="head"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="jaw" type="revolute">
     <axis xyz="1 0 0"/>
@@ -235,6 +405,7 @@
     <origin rpy="0.085 0 3.1415" xyz="-0.001 0.0375 0.0437"/>
     <parent link="head"/>
     <child link="jaw"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="skull" type="fixed">
     <origin rpy="0 0 0" xyz="-0.001 0.044 -0.0245"/>
@@ -261,6 +432,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/face.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <joint name="eyes_updown" type="revolute">
     <axis xyz="1 0 0"/>
@@ -268,6 +450,7 @@
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="face"/>
     <child link="eyesupport"/>
+    <dynamics damping="0.7"/>
   </joint>
   <link name="eyesupport">
     <visual>
@@ -279,6 +462,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/eyesupport.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_eyesupport">
     <visual>
@@ -290,6 +484,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/right_eyesupport.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_camera">
     <visual>
@@ -301,6 +506,17 @@
         <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/camera.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_eye">
     <visual>
@@ -312,6 +528,17 @@
         <color rgba="0.7 0.7 0.7 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/eye.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_iris">
     <visual>
@@ -323,6 +550,17 @@
         <color rgba="0.25 0.41 0.88 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/iris.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <joint name="right_camera" type="fixed">
     <origin rpy="0 0 0" xyz="0 -0.001 0"/>
@@ -345,6 +583,7 @@
     <origin rpy="0 0 0" xyz="0.033 0 -0.0036"/>
     <parent link="eyesupport"/>
     <child link="right_eyesupport"/>
+    <dynamics damping="0.7"/>
   </joint>
   <link name="left_eyesupport">
     <visual>
@@ -356,6 +595,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/left_eyesupport.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_camera">
     <visual>
@@ -367,6 +617,17 @@
         <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/camera.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_eye">
     <visual>
@@ -378,6 +639,17 @@
         <color rgba="0.7 0.7 0.7 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/eye.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_iris">
     <visual>
@@ -389,6 +661,17 @@
         <color rgba="0.25 0.41 0.88 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/iris.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <joint name="left_camera" type="fixed">
     <origin rpy="0 0 0" xyz="0 -0.001 0"/>
@@ -412,6 +695,7 @@
     <origin rpy="0 0 0" xyz="-0.033 0 -0.0036"/>
     <parent link="eyesupport"/>
     <child link="left_eyesupport"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="face" type="fixed">
     <origin rpy="0 0 0" xyz="0 0.0637 0.079"/>
@@ -428,6 +712,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/right_shoulder_base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_shoulder">
     <visual>
@@ -439,6 +734,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/right_shoulder.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_bicep">
     <visual>
@@ -450,6 +756,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/bicep.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_bicepcover">
     <visual>
@@ -461,6 +778,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/bicepcover.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_forearm">
     <visual>
@@ -472,6 +800,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/right_forearm.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0.001 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.001 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <joint name="right_shoulder_up" type="revolute">
     <axis xyz="1 0 0"/>
@@ -479,6 +818,7 @@
     <origin rpy="0 0 0" xyz="0.012 0 -0.04"/>
     <parent link="right_shoulder_base"/>
     <child link="right_shoulder"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_bicep_rotate" type="revolute">
     <axis xyz="0 0 1"/>
@@ -486,6 +826,7 @@
     <origin rpy="0 0 0" xyz="0.066 0 -0.060"/>
     <parent link="right_shoulder"/>
     <child link="right_bicep"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_bicep" type="revolute">
     <axis xyz="1 0 0"/>
@@ -493,6 +834,7 @@
     <origin rpy="0 0 0" xyz="0 -0.0278 -0.2235"/>
     <parent link="right_bicep"/>
     <child link="right_forearm"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_bicepcover" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -505,6 +847,7 @@
     <origin rpy="0 0 0" xyz="0.143 0 0.298"/>
     <parent link="torso"/>
     <child link="right_shoulder_base"/>
+    <dynamics damping="0.7"/>
   </joint>
   <link name="right_hand">
     <visual>
@@ -516,6 +859,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/right_hand.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_thumb1">
     <visual>
@@ -527,6 +881,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/right_thumb5_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="3.1415 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="3.1415 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_thumb2">
     <visual>
@@ -538,6 +903,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/thumb5_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_thumb3">
     <visual>
@@ -549,6 +925,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/thumb5_3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_index1">
     <visual>
@@ -560,6 +947,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/index3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_index2">
     <visual>
@@ -571,6 +969,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/index3_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_index3">
     <visual>
@@ -582,6 +991,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/index3_3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_middle1">
     <visual>
@@ -593,6 +1013,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/middle3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_middle2">
     <visual>
@@ -604,6 +1035,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/middle3_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_middle3">
     <visual>
@@ -615,6 +1057,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/middle3_3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_ring1">
     <visual>
@@ -626,6 +1079,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/right_ring3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_ring2">
     <visual>
@@ -637,6 +1101,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/ring3_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_ring3">
     <visual>
@@ -648,6 +1123,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/ring3_3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_ring4">
     <visual>
@@ -659,6 +1145,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/ring3_4.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_pinky1">
     <visual>
@@ -670,6 +1167,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/right_pinky3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_pinky2">
     <visual>
@@ -681,6 +1189,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/pinky3_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_pinky3">
     <visual>
@@ -692,6 +1211,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/pinky3_3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_pinky4">
     <visual>
@@ -703,6 +1233,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/pinky3_4.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <joint name="right_thumb1" type="revolute">
     <axis xyz="0 0 1"/>
@@ -711,6 +1252,7 @@
     <mimic joint="right_thumb" multiplier="-0.75" offset="0"/>
     <parent link="right_hand"/>
     <child link="right_thumb1"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_thumb" type="revolute">
     <axis xyz="1 0 0"/>
@@ -718,6 +1260,7 @@
     <origin rpy="0 2.3 -0.3" xyz="-0.02725 -0.0006 0.014"/>
     <parent link="right_thumb1"/>
     <child link="right_thumb2"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_thumb3" type="revolute">
     <axis xyz="1 0 0"/>
@@ -726,6 +1269,7 @@
     <mimic joint="right_thumb" multiplier="1" offset="0"/>
     <parent link="right_thumb2"/>
     <child link="right_thumb3"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_index1" type="revolute">
     <axis xyz="1 0 0"/>
@@ -734,6 +1278,7 @@
     <mimic joint="right_index" multiplier="1" offset="0"/>
     <parent link="right_hand"/>
     <child link="right_index1"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_index" type="revolute">
     <axis xyz="1 0 0"/>
@@ -741,6 +1286,7 @@
     <origin rpy="0 0 0" xyz="0 0.001 -0.03595"/>
     <parent link="right_index1"/>
     <child link="right_index2"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_index3" type="revolute">
     <axis xyz="1 0 0"/>
@@ -749,6 +1295,7 @@
     <mimic joint="right_index" multiplier="1" offset="0"/>
     <parent link="right_index2"/>
     <child link="right_index3"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_middle1" type="revolute">
     <axis xyz="1 0 0"/>
@@ -757,6 +1304,7 @@
     <mimic joint="right_middle" multiplier="1" offset="0"/>
     <parent link="right_hand"/>
     <child link="right_middle1"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_middle" type="revolute">
     <axis xyz="1 0 0"/>
@@ -764,6 +1312,7 @@
     <origin rpy="0 0 0" xyz="0 0.000 -0.0389"/>
     <parent link="right_middle1"/>
     <child link="right_middle2"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_middle3" type="revolute">
     <axis xyz="1 0 0"/>
@@ -772,6 +1321,7 @@
     <mimic joint="right_middle" multiplier="1" offset="0"/>
     <parent link="right_middle2"/>
     <child link="right_middle3"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_ring1" type="revolute">
     <axis xyz="0 0 1"/>
@@ -780,6 +1330,7 @@
     <mimic joint="right_ring" multiplier="-0.1" offset="0"/>
     <parent link="right_hand"/>
     <child link="right_ring1"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_ring" type="revolute">
     <axis xyz="1 0 0"/>
@@ -787,6 +1338,7 @@
     <origin rpy="0 0.7775 0" xyz="-0.0351 0.00126 -0.0166"/>
     <parent link="right_ring1"/>
     <child link="right_ring2"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_ring3" type="revolute">
     <axis xyz="1 0 0"/>
@@ -795,6 +1347,7 @@
     <mimic joint="right_ring" multiplier="1" offset="0"/>
     <parent link="right_ring2"/>
     <child link="right_ring3"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_ring4" type="revolute">
     <axis xyz="1 0 0"/>
@@ -803,6 +1356,7 @@
     <mimic joint="right_ring" multiplier="1" offset="0"/>
     <parent link="right_ring3"/>
     <child link="right_ring4"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_pinky1" type="revolute">
     <axis xyz="0 0 1"/>
@@ -811,6 +1365,7 @@
     <mimic joint="right_pinky" multiplier="-0.1" offset="0"/>
     <parent link="right_hand"/>
     <child link="right_pinky1"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_pinky" type="revolute">
     <axis xyz="1 0 0"/>
@@ -818,6 +1373,7 @@
     <origin rpy="0 0.93 0" xyz="-0.046 -0 -0.0228"/>
     <parent link="right_pinky1"/>
     <child link="right_pinky2"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_pinky3" type="revolute">
     <axis xyz="1 0 0"/>
@@ -826,6 +1382,7 @@
     <mimic joint="right_pinky" multiplier="1" offset="0"/>
     <parent link="right_pinky2"/>
     <child link="right_pinky3"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_pinky4" type="revolute">
     <axis xyz="1 0 0"/>
@@ -834,6 +1391,7 @@
     <mimic joint="right_pinky" multiplier="1" offset="0"/>
     <parent link="right_pinky3"/>
     <child link="right_pinky4"/>
+    <dynamics damping="0.7"/>
   </joint>
   <link name="right_handcover">
     <visual>
@@ -845,6 +1403,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/right_cover_hand.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_cover_handring">
     <visual>
@@ -856,6 +1425,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/right_cover_handring.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_cover_handpinky">
     <visual>
@@ -867,6 +1447,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/right_cover_handpinky.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_cover_thumb">
     <visual>
@@ -878,6 +1469,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/right_cover_thumb.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_cover_index">
     <visual>
@@ -889,6 +1491,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/right_cover_index.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_cover_middle">
     <visual>
@@ -900,6 +1513,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/right_cover_middle.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_cover_ring">
     <visual>
@@ -911,6 +1535,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/right_cover_ring.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="right_cover_pinky">
     <visual>
@@ -922,6 +1557,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/right_cover_pinky.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <joint name="right_handcover" type="fixed">
     <origin rpy="0 0 0" xyz="-0.0192 0.009 -0.0977"/>
@@ -969,6 +1615,7 @@
     <origin rpy="0 0 0" xyz="-0.01 -0.0144 -0.2885"/>
     <parent link="right_forearm"/>
     <child link="right_hand"/>
+    <dynamics damping="0.7"/>
   </joint>
   <link name="left_shoulder_base">
     <visual>
@@ -980,6 +1627,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/left_shoulder_base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_shoulder">
     <visual>
@@ -991,6 +1649,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/left_shoulder.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_bicep">
     <visual>
@@ -1002,6 +1671,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/bicep.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_bicepcover">
     <visual>
@@ -1013,6 +1693,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/bicepcover.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_forearm">
     <visual>
@@ -1024,6 +1715,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/left_forearm.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="-0.001 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.001 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <joint name="left_shoulder_up" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1031,6 +1733,7 @@
     <origin rpy="0 0 0" xyz="-0.012 0 -0.04"/>
     <parent link="left_shoulder_base"/>
     <child link="left_shoulder"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_bicep_rotate" type="revolute">
     <axis xyz="0 0 1"/>
@@ -1038,6 +1741,7 @@
     <origin rpy="0 0 0" xyz="-0.066 0 -0.060"/>
     <parent link="left_shoulder"/>
     <child link="left_bicep"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_bicep" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1045,6 +1749,7 @@
     <origin rpy="0 0 0" xyz="0 -0.0278 -0.2235"/>
     <parent link="left_bicep"/>
     <child link="left_forearm"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_bicepcover" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1057,6 +1762,7 @@
     <origin rpy="0 0 0" xyz="-0.143 0 0.298"/>
     <parent link="torso"/>
     <child link="left_shoulder_base"/>
+    <dynamics damping="0.7"/>
   </joint>
   <link name="left_hand">
     <visual>
@@ -1068,6 +1774,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/left_hand.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_thumb1">
     <visual>
@@ -1079,6 +1796,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/left_thumb5_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="3.1415 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="3.1415 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_thumb2">
     <visual>
@@ -1090,6 +1818,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/thumb5_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_thumb3">
     <visual>
@@ -1101,6 +1840,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/thumb5_3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_index1">
     <visual>
@@ -1112,6 +1862,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/index3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_index2">
     <visual>
@@ -1123,6 +1884,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/index3_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_index3">
     <visual>
@@ -1134,6 +1906,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/index3_3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_middle1">
     <visual>
@@ -1145,6 +1928,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/middle3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_middle2">
     <visual>
@@ -1156,6 +1950,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/middle3_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_middle3">
     <visual>
@@ -1167,6 +1972,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/middle3_3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_ring1">
     <visual>
@@ -1178,6 +1994,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/left_ring3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_ring2">
     <visual>
@@ -1189,6 +2016,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/ring3_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_ring3">
     <visual>
@@ -1200,6 +2038,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/ring3_3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_ring4">
     <visual>
@@ -1211,6 +2060,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/ring3_4.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_pinky1">
     <visual>
@@ -1222,6 +2082,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/left_pinky3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_pinky2">
     <visual>
@@ -1233,6 +2104,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/pinky3_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_pinky3">
     <visual>
@@ -1244,6 +2126,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/pinky3_3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_pinky4">
     <visual>
@@ -1255,6 +2148,17 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/pinky3_4.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <joint name="left_thumb1" type="revolute">
     <axis xyz="0 0 1"/>
@@ -1263,6 +2167,7 @@
     <mimic joint="left_thumb" multiplier="0.75" offset="0"/>
     <parent link="left_hand"/>
     <child link="left_thumb1"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_thumb" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1270,6 +2175,7 @@
     <origin rpy="0 -2.3 0.3" xyz="0.02725 -0.0006 0.014"/>
     <parent link="left_thumb1"/>
     <child link="left_thumb2"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_thumb3" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1278,6 +2184,7 @@
     <mimic joint="left_thumb" multiplier="1" offset="0"/>
     <parent link="left_thumb2"/>
     <child link="left_thumb3"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_index1" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1286,6 +2193,7 @@
     <mimic joint="left_index" multiplier="1" offset="0"/>
     <parent link="left_hand"/>
     <child link="left_index1"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_index" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1293,6 +2201,7 @@
     <origin rpy="0 0 0" xyz="0 0.001 -0.03595"/>
     <parent link="left_index1"/>
     <child link="left_index2"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_index3" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1301,6 +2210,7 @@
     <mimic joint="left_index" multiplier="1" offset="0"/>
     <parent link="left_index2"/>
     <child link="left_index3"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_middle1" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1309,6 +2219,7 @@
     <mimic joint="left_middle" multiplier="1" offset="0"/>
     <parent link="left_hand"/>
     <child link="left_middle1"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_middle" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1316,6 +2227,7 @@
     <origin rpy="0 0 0" xyz="0 0.000 -0.0389"/>
     <parent link="left_middle1"/>
     <child link="left_middle2"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_middle3" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1324,6 +2236,7 @@
     <mimic joint="left_middle" multiplier="1" offset="0"/>
     <parent link="left_middle2"/>
     <child link="left_middle3"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_ring1" type="revolute">
     <axis xyz="0 0 1"/>
@@ -1332,6 +2245,7 @@
     <mimic joint="left_ring" multiplier="0.1" offset="0"/>
     <parent link="left_hand"/>
     <child link="left_ring1"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_ring" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1339,6 +2253,7 @@
     <origin rpy="0 -0.7775 0" xyz="0.0351 0.00126 -0.0166"/>
     <parent link="left_ring1"/>
     <child link="left_ring2"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_ring3" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1347,6 +2262,7 @@
     <mimic joint="left_ring" multiplier="1" offset="0"/>
     <parent link="left_ring2"/>
     <child link="left_ring3"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_ring4" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1355,6 +2271,7 @@
     <mimic joint="left_ring" multiplier="1" offset="0"/>
     <parent link="left_ring3"/>
     <child link="left_ring4"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_pinky1" type="revolute">
     <axis xyz="0 0 1"/>
@@ -1363,6 +2280,7 @@
     <mimic joint="left_pinky" multiplier="0.1" offset="0"/>
     <parent link="left_hand"/>
     <child link="left_pinky1"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_pinky" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1370,6 +2288,7 @@
     <origin rpy="0 -0.93 0" xyz="0.046 -0 -0.0228"/>
     <parent link="left_pinky1"/>
     <child link="left_pinky2"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_pinky3" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1378,6 +2297,7 @@
     <mimic joint="left_pinky" multiplier="1" offset="0"/>
     <parent link="left_pinky2"/>
     <child link="left_pinky3"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_pinky4" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1386,6 +2306,7 @@
     <mimic joint="left_pinky" multiplier="1" offset="0"/>
     <parent link="left_pinky3"/>
     <child link="left_pinky4"/>
+    <dynamics damping="0.7"/>
   </joint>
   <link name="left_handcover">
     <visual>
@@ -1397,6 +2318,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/left_cover_hand.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_cover_handring">
     <visual>
@@ -1408,6 +2340,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/left_cover_handring.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_cover_handpinky">
     <visual>
@@ -1419,6 +2362,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/left_cover_handpinky.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_cover_thumb">
     <visual>
@@ -1430,6 +2384,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/left_cover_thumb.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_cover_index">
     <visual>
@@ -1441,6 +2406,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/left_cover_index.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_cover_middle">
     <visual>
@@ -1452,6 +2428,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/left_cover_middle.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_cover_ring">
     <visual>
@@ -1463,6 +2450,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/left_cover_ring.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <link name="left_cover_pinky">
     <visual>
@@ -1474,6 +2472,17 @@
         <color rgba="0.6 0.6 0.6 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://inmoov_description/meshes/left_cover_pinky.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
   </link>
   <joint name="left_handcover" type="fixed">
     <origin rpy="0 0 0" xyz="0.0192 0.009 -0.0977"/>
@@ -1521,6 +2530,771 @@
     <origin rpy="0 0 0" xyz="0.01 -0.0144 -0.2885"/>
     <parent link="left_forearm"/>
     <child link="left_hand"/>
+    <dynamics damping="0.7"/>
   </joint>
+  <!--HEAD MOUNTED CAMERAS (STEREO)-->
+  <gazebo reference="left_camera">
+    <sensor name="stereo_camera" type="multicamera">
+      <update_rate>30.0</update_rate>
+      <camera name="left">
+        <horizontal_fov>1.3962634</horizontal_fov>
+        <image>
+          <width>1280</width>
+          <height>720</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.007</stddev>
+        </noise>
+      </camera>
+      <camera name="right">
+        <pose>0 -0.07 0 0 0 0</pose>
+        <horizontal_fov>1.3962634</horizontal_fov>
+        <image>
+          <width>1280</width>
+          <height>720</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.007</stddev>
+        </noise>
+      </camera>
+      <plugin filename="libgazebo_ros_multicamera.so" name="stereo_camera_controller">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>inmoov/stereocamera</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>left_camera</frameName>
+        <!--<rightFrameName>right_camera</rightFrameName>-->
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
+  </gazebo>
+  <!--KINECT-->
+  <!--TOUCH SENSORS-->
+  <!--PIR SENSOR-->
+  <!--GAZEBO_ROS_CONTROL PLUGIN-->
+  <gazebo>
+    <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
+      <robotNamespace>/inmoov</robotNamespace>
+    </plugin>
+  </gazebo>
+  <!--TRANSMISSION PLUGINS-->
+  <!--Head & Face-->
+  <transmission name="head_tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="head_tilt">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="headmotor1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="head_tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="head_updown">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="headmotor2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="head_tran3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="head_leftright">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="headmotor3">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="jaw_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="jaw">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="jawmotor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="eye_tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="eyes_updown">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="eyemotor1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="eye_tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="eye_leftright">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="eyemotor2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <!--Torso-->
+  <transmission name="waist_tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="waist_rotate">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="waistmotor1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="waist_tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="waist_lean">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="waistmotor2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <!--Right Arm-->
+  <transmission name="rshoulder_tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_shoulder_side">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rshouldermotor1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="rshoulder_tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_shoulder_up">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rshouldermotor2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="rbicep_tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_bicep_rotate">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rbicepmotor1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="rbicep_tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_bicep">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rbicepmotor2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <!--Left Arm-->
+  <transmission name="lshoulder_tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_shoulder_side">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="lshouldermotor1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="lshoulder_tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_shoulder_up">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="lshouldermotor2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="lbicep_tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_bicep_rotate">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="lbicepmotor1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="lbicep_tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_bicep">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="lbicepmotor2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <!--Right Hand-->
+  <transmission name="rthumb_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_thumb">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rthumbmotor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="rindex_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_index">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rindexmotor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="rmiddle_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_middle">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rmiddlemotor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="rring_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_ring">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rringmotor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="rpinky_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_pinky">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rpinkymotor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="rwrist_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_hand">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rwristmotor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <!--Left Hand-->
+  <transmission name="lthumb_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_thumb">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="lthumbmotor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="lindex_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_index">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="lindexmotor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="lmiddle_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_middle">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="lmiddlemotor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="lring_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_ring">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="lringmotor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="lpinky_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_pinky">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="lpinkymotor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="lwrist_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_hand">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="lwristmotor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <!--GENERAL-->
+  <gazebo reference="base_link">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="pedestal">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="head_tilt">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <!--TORSO-->
+  <gazebo reference="mid_stomach">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="disk">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="top_stomach">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="torso">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="kinect">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="chestplate">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <!--HEAD-->
+  <gazebo reference="head_base">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="head">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="jaw">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="skull">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="left_ear">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_ear">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <!--FACE-->
+  <gazebo reference="face">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="eyesupport">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_eyesupport">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_camera">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="right_eye">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/White</material>
+  </gazebo>
+  <gazebo reference="right_iris">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Blue</material>
+  </gazebo>
+  <gazebo reference="left_eyesupport">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_camera">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="left_eye">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/White</material>
+  </gazebo>
+  <gazebo reference="left_iris">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Blue</material>
+  </gazebo>
+  <!--RIGHT ARM-->
+  <gazebo reference="right_shoulder_base">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_shoulder">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_bicep">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_bicepcover">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="right_forarm">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <!--LEFT ARM-->
+  <gazebo reference="left_shoulder_base">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_shoulder">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_bicep">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_bicepcover">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="left_forarm">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <!--RIGHT HAND-->
+  <gazebo reference="right_hand">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_thumb1">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_thumb2">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_index1">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_index2">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_index3">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_middle1">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_middle2">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_middle3">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_ring1">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_ring2">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_ring3">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_ring4">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_pinky1">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_pinky2">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_pinky3">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_pinky4">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_cover_handring">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="right_cover_handpinky">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="right_cover_thumb">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="right_cover_index">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="right_cover_ring">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="right_cover_pinky">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <!--LEFT HAND-->
+  <gazebo reference="left_hand">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_thumb1">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_thumb2">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_index1">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_index2">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_index3">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_middle1">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_middle2">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_middle3">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_ring1">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_ring2">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_ring3">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_ring4">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_pinky1">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_pinky2">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_pinky3">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_pinky4">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_cover_handring">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="left_cover_handpinky">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="left_cover_thumb">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="left_cover_index">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="left_cover_ring">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="left_cover_pinky">
+    <mu1>0.3</mu1>
+    <mu2>0.3</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
 </robot>
-

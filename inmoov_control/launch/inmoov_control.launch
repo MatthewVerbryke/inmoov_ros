@@ -1,0 +1,45 @@
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find inmoov_control)/config/inmoov_control.yaml" command="load"/>
+
+  <!-- load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" ns="/inmoov" args=" joint_state_controller 
+					head_tilt_position_controller   	
+					head_updown_position_controller 
+					head_leftright_position_controller 
+					jaw_position_controller
+					eyes_updown_position_controller
+					eye_leftright_position_controller
+					waist_rotate_position_controller
+					waist_lean_position_controller
+					right_shoulder_side_position_controller
+					right_shoulder_up_position_controller
+					right_bicep_rotate_position_controller
+					right_bicep_position_controller
+					left_shoulder_side_position_controller
+					left_shoulder_up_position_controller
+					left_bicep_rotate_position_controller
+					left_bicep_position_controller
+					right_thumb_position_controller
+					right_index_position_controller
+					right_middle_position_controller
+					right_ring_position_controller
+					right_pinky_position_controller
+					right_hand_position_controller
+					left_thumb_position_controller
+					left_index_position_controller
+					left_middle_position_controller
+					left_ring_position_controller
+					left_pinky_position_controller
+					left_hand_position_controller
+  "/>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+    <remap from="/joint_states" to="/inmoov/joint_states" />
+  </node>
+
+</launch>
