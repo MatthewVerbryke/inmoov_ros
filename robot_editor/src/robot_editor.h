@@ -1,6 +1,7 @@
 #ifndef ROBOT_EDITOR_ROBOT_EDITOR_H_
 #define ROBOT_EDITOR_ROBOT_EDITOR_H_
 
+#ifndef Q_MOC_RUN // *** added to prevent make error (see: http://answers.ros.org/question/233786/parse-error-at-boost_join/) ***
 #include <QObject>
 #include <ui_main_window.h>
 
@@ -9,7 +10,7 @@
 #include <map>
 
 #include <boost/thread/mutex.hpp>
-
+#endif // *** added to prevent make error (see: http://answers.ros.org/question/233786/parse-error-at-boost_join/) ***
 
 class QMainWindow;
 class RobotPreview;

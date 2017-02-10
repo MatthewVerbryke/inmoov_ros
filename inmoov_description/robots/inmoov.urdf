@@ -1252,6 +1252,7 @@
     <mimic joint="right_thumb" multiplier="-0.75" offset="0"/>
     <parent link="right_hand"/>
     <child link="right_thumb1"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_thumb" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1268,6 +1269,7 @@
     <mimic joint="right_thumb" multiplier="1" offset="0"/>
     <parent link="right_thumb2"/>
     <child link="right_thumb3"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_index1" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1276,6 +1278,7 @@
     <mimic joint="right_index" multiplier="1" offset="0"/>
     <parent link="right_hand"/>
     <child link="right_index1"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_index" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1292,6 +1295,7 @@
     <mimic joint="right_index" multiplier="1" offset="0"/>
     <parent link="right_index2"/>
     <child link="right_index3"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_middle1" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1300,6 +1304,7 @@
     <mimic joint="right_middle" multiplier="1" offset="0"/>
     <parent link="right_hand"/>
     <child link="right_middle1"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_middle" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1316,6 +1321,7 @@
     <mimic joint="right_middle" multiplier="1" offset="0"/>
     <parent link="right_middle2"/>
     <child link="right_middle3"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_ring1" type="revolute">
     <axis xyz="0 0 1"/>
@@ -1324,6 +1330,7 @@
     <mimic joint="right_ring" multiplier="-0.1" offset="0"/>
     <parent link="right_hand"/>
     <child link="right_ring1"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_ring" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1340,6 +1347,7 @@
     <mimic joint="right_ring" multiplier="1" offset="0"/>
     <parent link="right_ring2"/>
     <child link="right_ring3"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_ring4" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1348,6 +1356,7 @@
     <mimic joint="right_ring" multiplier="1" offset="0"/>
     <parent link="right_ring3"/>
     <child link="right_ring4"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_pinky1" type="revolute">
     <axis xyz="0 0 1"/>
@@ -1356,6 +1365,7 @@
     <mimic joint="right_pinky" multiplier="-0.1" offset="0"/>
     <parent link="right_hand"/>
     <child link="right_pinky1"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_pinky" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1372,6 +1382,7 @@
     <mimic joint="right_pinky" multiplier="1" offset="0"/>
     <parent link="right_pinky2"/>
     <child link="right_pinky3"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="right_pinky4" type="revolute">
     <axis xyz="1 0 0"/>
@@ -1380,6 +1391,7 @@
     <mimic joint="right_pinky" multiplier="1" offset="0"/>
     <parent link="right_pinky3"/>
     <child link="right_pinky4"/>
+    <dynamics damping="0.7"/>
   </joint>
   <link name="right_handcover">
     <visual>
@@ -2155,6 +2167,7 @@
     <mimic joint="left_thumb" multiplier="0.75" offset="0"/>
     <parent link="left_hand"/>
     <child link="left_thumb1"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_thumb" type="revolute">
     <axis xyz="1 0 0"/>
@@ -2171,6 +2184,7 @@
     <mimic joint="left_thumb" multiplier="1" offset="0"/>
     <parent link="left_thumb2"/>
     <child link="left_thumb3"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_index1" type="revolute">
     <axis xyz="1 0 0"/>
@@ -2179,6 +2193,7 @@
     <mimic joint="left_index" multiplier="1" offset="0"/>
     <parent link="left_hand"/>
     <child link="left_index1"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_index" type="revolute">
     <axis xyz="1 0 0"/>
@@ -2195,6 +2210,7 @@
     <mimic joint="left_index" multiplier="1" offset="0"/>
     <parent link="left_index2"/>
     <child link="left_index3"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_middle1" type="revolute">
     <axis xyz="1 0 0"/>
@@ -2203,6 +2219,7 @@
     <mimic joint="left_middle" multiplier="1" offset="0"/>
     <parent link="left_hand"/>
     <child link="left_middle1"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_middle" type="revolute">
     <axis xyz="1 0 0"/>
@@ -2219,6 +2236,7 @@
     <mimic joint="left_middle" multiplier="1" offset="0"/>
     <parent link="left_middle2"/>
     <child link="left_middle3"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_ring1" type="revolute">
     <axis xyz="0 0 1"/>
@@ -2227,6 +2245,7 @@
     <mimic joint="left_ring" multiplier="0.1" offset="0"/>
     <parent link="left_hand"/>
     <child link="left_ring1"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_ring" type="revolute">
     <axis xyz="1 0 0"/>
@@ -2243,6 +2262,7 @@
     <mimic joint="left_ring" multiplier="1" offset="0"/>
     <parent link="left_ring2"/>
     <child link="left_ring3"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_ring4" type="revolute">
     <axis xyz="1 0 0"/>
@@ -2251,6 +2271,7 @@
     <mimic joint="left_ring" multiplier="1" offset="0"/>
     <parent link="left_ring3"/>
     <child link="left_ring4"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_pinky1" type="revolute">
     <axis xyz="0 0 1"/>
@@ -2259,6 +2280,7 @@
     <mimic joint="left_pinky" multiplier="0.1" offset="0"/>
     <parent link="left_hand"/>
     <child link="left_pinky1"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_pinky" type="revolute">
     <axis xyz="1 0 0"/>
@@ -2275,6 +2297,7 @@
     <mimic joint="left_pinky" multiplier="1" offset="0"/>
     <parent link="left_pinky2"/>
     <child link="left_pinky3"/>
+    <dynamics damping="0.7"/>
   </joint>
   <joint name="left_pinky4" type="revolute">
     <axis xyz="1 0 0"/>
@@ -2283,6 +2306,7 @@
     <mimic joint="left_pinky" multiplier="1" offset="0"/>
     <parent link="left_pinky3"/>
     <child link="left_pinky4"/>
+    <dynamics damping="0.7"/>
   </joint>
   <link name="left_handcover">
     <visual>
