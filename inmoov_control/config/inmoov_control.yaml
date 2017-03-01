@@ -8,145 +8,145 @@ inmoov:
   head_tilt_position_controller:
     type: effort_controllers/JointPositionController
     joint: head_tilt
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   head_updown_position_controller:
     type: effort_controllers/JointPositionController
     joint: head_updown
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   head_leftright_position_controller:
     type: effort_controllers/JointPositionController
     joint: head_leftright
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   jaw_position_controller:
     type: effort_controllers/JointPositionController
     joint: jaw
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   eyes_updown_position_controller:
     type: effort_controllers/JointPositionController
     joint: eyes_updown
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   eye_leftright_position_controller:
     type: effort_controllers/JointPositionController
     joint: eye_leftright
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
 
   waist_rotate_position_controller:
     type: effort_controllers/JointPositionController
     joint: waist_rotate
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   waist_lean_position_controller:
     type: effort_controllers/JointPositionController
     joint: waist_lean
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
 
   right_shoulder_side_position_controller:
     type: effort_controllers/JointPositionController
     joint: right_shoulder_side
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   right_shoulder_up_position_controller:
     type: effort_controllers/JointPositionController
     joint: right_shoulder_up
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   right_bicep_rotate_position_controller:
     type: effort_controllers/JointPositionController
     joint: right_bicep_rotate
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   right_bicep_position_controller:
     type: effort_controllers/JointPositionController
     joint: right_bicep
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
 
   left_shoulder_side_position_controller:
     type: effort_controllers/JointPositionController
     joint: left_shoulder_side
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   left_shoulder_up_position_controller:
     type: effort_controllers/JointPositionController
     joint: left_shoulder_up
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   left_bicep_rotate_position_controller:
     type: effort_controllers/JointPositionController
     joint: left_bicep_rotate
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   left_bicep_position_controller:
     type: effort_controllers/JointPositionController
     joint: left_bicep
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
 
   right_thumb_position_controller:
     type: effort_controllers/JointPositionController
     joint: right_thumb
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   right_index_position_controller:
     type: effort_controllers/JointPositionController
     joint: right_index
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   right_middle_position_controller:
     type: effort_controllers/JointPositionController
     joint: right_middle
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   right_ring_position_controller:
     type: effort_controllers/JointPositionController
     joint: right_ring
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   right_pinky_position_controller:
     type: effort_controllers/JointPositionController
     joint: right_pinky
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   right_hand_position_controller:
     type: effort_controllers/JointPositionController
     joint: right_hand
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
 
   left_thumb_position_controller:
     type: effort_controllers/JointPositionController
     joint: left_thumb
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   left_index_position_controller:
     type: effort_controllers/JointPositionController
     joint: left_index
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   left_middle_position_controller:
     type: effort_controllers/JointPositionController
     joint: left_middle
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   left_ring_position_controller:
     type: effort_controllers/JointPositionController
     joint: left_ring
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   left_pinky_position_controller:
     type: effort_controllers/JointPositionController
     joint: left_pinky
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   left_hand_position_controller:
     type: effort_controllers/JointPositionController
     joint: left_hand
-    pid: {p: 10.0, i: 0.01, d: 1.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
