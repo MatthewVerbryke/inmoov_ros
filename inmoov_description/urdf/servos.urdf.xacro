@@ -83,6 +83,16 @@
   </actuator>
 </transmission>
 
+<transmission name="eye_tran3">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_eye_leftright">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="eyemotor3">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
 
 
 	<!--Torso-->
@@ -146,12 +156,12 @@
   </actuator>
 </transmission>
 
-<transmission name="rbicep_tran2">
+<transmission name="relbow_tran2">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="right_bicep">
+  <joint name="right_elbow">
     <hardwareInterface>EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="rbicepmotor2">
+  <actuator name="relbowmotor2">
     <hardwareInterface>EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
@@ -194,12 +204,12 @@
   </actuator>
 </transmission>
 
-<transmission name="lbicep_tran2">
+<transmission name="lelbow_tran2">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="left_bicep">
+  <joint name="left_elbow">
     <hardwareInterface>EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="lbicepmotor2">
+  <actuator name="lelbowmotor2">
     <hardwareInterface>EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
@@ -211,7 +221,7 @@
 
 <transmission name="rthumb_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="right_thumb">
+  <joint name="right_thumbMCP">
     <hardwareInterface>EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="rthumbmotor">
@@ -220,9 +230,32 @@
   </actuator>
 </transmission>
 
+<transmission name="rthumb_tran1">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_thumbCMC">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rthumbmotor1">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rthumb_tran3">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_thumbIP">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rthumbmotor3">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+
 <transmission name="rindex_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="right_index">
+  <joint name="right_indexPIP">
     <hardwareInterface>EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="rindexmotor">
@@ -231,9 +264,32 @@
   </actuator>
 </transmission>
 
+<transmission name="rindex_tran1">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_indexMCP">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rindexmotor1">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rindex_tran3">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_indexDIP">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rindexmotor3">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+
 <transmission name="rmiddle_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="right_middle">
+  <joint name="right_middlePIP">
     <hardwareInterface>EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="rmiddlemotor">
@@ -242,9 +298,32 @@
   </actuator>
 </transmission>
 
+<transmission name="rmiddle_tran1">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_middleMCP">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rmiddlemotor1">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rmiddle_tran3">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_middleDIP">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rmiddlemotor3">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+
 <transmission name="rring_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="right_ring">
+  <joint name="right_ringMCP">
     <hardwareInterface>EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="rringmotor">
@@ -253,9 +332,43 @@
   </actuator>
 </transmission>
 
+<transmission name="rring_tran1">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_ringCMC">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rringmotor1">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rring_tran3">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_ringPIP">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rringmotor3">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rring_tran4">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_ringDIP">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rringmotor4">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+
 <transmission name="rpinky_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="right_pinky">
+  <joint name="right_pinkyMCP">
     <hardwareInterface>EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="rpinkymotor">
@@ -264,9 +377,43 @@
   </actuator>
 </transmission>
 
+<transmission name="rpinky_tran1">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_pinkyCMC">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rpinkymotor1">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rpinky_tran3">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_pinkyPIP">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rpinkymotor3">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rpinky_tran4">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_pinkyDIP">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rpinkymotor4">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+
 <transmission name="rwrist_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="right_hand">
+  <joint name="right_wrist">
     <hardwareInterface>EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="rwristmotor">
@@ -281,7 +428,7 @@
 
 <transmission name="lthumb_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="left_thumb">
+  <joint name="left_thumbMCP">
     <hardwareInterface>EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="lthumbmotor">
@@ -290,9 +437,32 @@
   </actuator>
 </transmission>
 
+<transmission name="lthumb_tran1">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_thumbCMC">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lthumbmotor1">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="lthumb_tran3">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_thumbIP">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lthumbmotor3">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+
 <transmission name="lindex_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="left_index">
+  <joint name="left_indexPIP">
     <hardwareInterface>EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="lindexmotor">
@@ -301,9 +471,32 @@
   </actuator>
 </transmission>
 
+<transmission name="lindex_tran1">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_indexMCP">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lindexmotor1">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="lindex_tran3">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_indexDIP">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lindexmotor3">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+
 <transmission name="lmiddle_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="left_middle">
+  <joint name="left_middlePIP">
     <hardwareInterface>EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="lmiddlemotor">
@@ -312,9 +505,32 @@
   </actuator>
 </transmission>
 
+<transmission name="lmiddle_tran1">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_middleMCP">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lmiddlemotor1">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="lmiddle_tran3">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_middleDIP">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lmiddlemotor3">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+
 <transmission name="lring_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="left_ring">
+  <joint name="left_ringMCP">
     <hardwareInterface>EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="lringmotor">
@@ -323,9 +539,43 @@
   </actuator>
 </transmission>
 
+<transmission name="lring_tran1">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_ringCMC">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lringmotor1">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="lring_tran3">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_ringPIP">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lringmotor3">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="lring_tran4">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_ringDIP">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lringmotor4">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+
 <transmission name="lpinky_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="left_pinky">
+  <joint name="left_pinkyMCP">
     <hardwareInterface>EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="lpinkymotor">
@@ -334,9 +584,43 @@
   </actuator>
 </transmission>
 
+<transmission name="lpinky_tran1">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_pinkyCMC">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lpinkymotor1">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="lpinky_tran3">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_pinkyPIP">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lpinkymotor3">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="lpinky_tran4">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_pinkyDIP">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lpinkymotor4">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+
 <transmission name="lwrist_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="left_hand">
+  <joint name="left_wrist">
     <hardwareInterface>EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="lwristmotor">

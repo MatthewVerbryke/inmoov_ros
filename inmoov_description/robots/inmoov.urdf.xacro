@@ -8,7 +8,8 @@
   <xacro:include filename="$(find inmoov_description)/urdf/asmHead.urdf.xacro" />
   <xacro:include filename="$(find inmoov_description)/urdf/asmFace.urdf.xacro" />
   <xacro:include filename="$(find inmoov_description)/urdf/asmArm.urdf.xacro" />
-  <xacro:include filename="$(find inmoov_description)/urdf/asmHand.urdf.xacro" />
+  <xacro:include filename="$(find inmoov_description)/urdf/rightHand.urdf.xacro" />
+  <xacro:include filename="$(find inmoov_description)/urdf/leftHand.urdf.xacro" />
 
 
   <link name="world"/>
@@ -60,8 +61,8 @@
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0.58"/>
-      <mass value="10"/>
-      <inertia ixx="1"  ixy="0"  ixz="0" iyy="1" iyz="0" izz="1" />
+      <mass value="5"/>
+      <inertia ixx="0.1"  ixy="0"  ixz="0" iyy="0.1" iyz="0" izz="0.1" />
     </inertial>
   </link>
 
@@ -74,16 +75,10 @@
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <xacro:frame_color/>
     </visual>
-    <collision>
-      <geometry>
-        <mesh filename="package://inmoov_description/meshes/virtual.stl" scale="0.001 0.001 0.001"/>
-      </geometry> 
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-    </collision>
     <inertial>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="1"/>
-      <inertia ixx="0.1"  ixy="0"  ixz="0" iyy="0.1" iyz="0" izz="0.1" />
+      <origin rpy="0 0 0" xyz="0 0.001 0.001"/>
+      <mass value="5.25e-4"/>
+      <inertia ixx="1e-3"  ixy="0"  ixz="0" iyy="1e-3" iyz="0" izz="1e-3" />
     </inertial>
   </link>
 
@@ -110,7 +105,7 @@
 
   <joint name="head_updown" type="revolute">
    <axis xyz="1 0 0"/>
-   <limit effort="1000.0" lower="-0.30" upper="0.30" velocity="0.5"/>
+   <limit effort="2.422" lower="-0.30" upper="0.30" velocity="7.48"/>
    <origin rpy="0 0 0" xyz="0 0 0"/>
    <parent link="head_tilt"/>
    <child link="head_base"/>
@@ -136,7 +131,7 @@
 
   <joint name="right_shoulder_side" type="revolute">
    <axis xyz="0 1 0"/>
-   <limit effort="1000.0" lower="-0.75" upper="0" velocity="0.5"/>
+   <limit effort="2.422" lower="-1.22" upper="0" velocity="7.48"/>
    <origin rpy="0 0 0" xyz="0.143 0 0.298"/>
    <parent link="torso"/>
    <child link="right_shoulder_base"/>
@@ -144,12 +139,12 @@
   </joint>
 
 
-  <xacro:hand side="right" neg="1" flip="0" covers="yes" />
+  <xacro:rhand side="right" neg="1" covers="yes" />
 
 
-  <joint name="right_hand" type="revolute">
+  <joint name="right_wrist" type="revolute">
    <axis xyz="0 0 1"/>
-   <limit effort="1000.0" lower="-3.14" upper="0" velocity="0.5"/>
+   <limit effort="0.9807" lower="-3.14" upper="0" velocity="5.236"/>
    <origin rpy="0 0 0" xyz="-0.01 -0.0144 -0.2885"/>
    <parent link="right_forearm"/>
    <child link="right_hand"/>
@@ -162,7 +157,7 @@
 
   <joint name="left_shoulder_side" type="revolute">
    <axis xyz="0 1 0"/>
-   <limit effort="1000.0" lower="0" upper="0.75" velocity="0.5"/>
+   <limit effort="2.422" lower="0" upper="1.22" velocity="7.48"/>
    <origin rpy="0 0 0" xyz="-0.143 0 0.298"/>
    <parent link="torso"/>
    <child link="left_shoulder_base"/>
@@ -170,12 +165,12 @@
   </joint>
 
 
-  <xacro:hand side="left" neg="-1" flip="3.1415926539" covers="yes" />
+  <xacro:lhand side="left" neg="-1" covers="yes" />
 
 
-  <joint name="left_hand" type="revolute">
+  <joint name="left_wrist" type="revolute">
    <axis xyz="0 0 1"/>
-   <limit effort="1000.0" lower="0" upper="3.14" velocity="0.5"/>
+   <limit effort="0.9807" lower="0" upper="3.14" velocity="5.236"/>
    <origin rpy="0 0 0" xyz="0.01 -0.0144 -0.2885"/>
    <parent link="left_forearm"/>
    <child link="left_hand"/>

@@ -8,13 +8,13 @@
 <gazebo reference="base_link">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Black</material>
+  <material>Gazebo/DarkGrey</material>
 </gazebo>
 
 <gazebo reference="pedestal">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Black</material>
+  <material>Gazebo/DarkGrey</material>
 </gazebo>
 
 <gazebo reference="head_tilt">
@@ -30,25 +30,25 @@
 <gazebo reference="mid_stomach">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
 <gazebo reference="disk">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 <gazebo reference="top_stomach">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
 <gazebo reference="torso">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
 <gazebo reference="kinect">
@@ -60,7 +60,7 @@
 <gazebo reference="chestplate">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 
@@ -70,37 +70,37 @@
 <gazebo reference="head_base">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
 <gazebo reference="head">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
 <gazebo reference="jaw">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 <gazebo reference="skull">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 <gazebo reference="left_ear">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
 <gazebo reference="right_ear">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
 
@@ -110,19 +110,19 @@
 <gazebo reference="face">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 <gazebo reference="eyesupport">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
 <gazebo reference="right_eyesupport">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
 <gazebo reference="right_camera">
@@ -146,7 +146,7 @@
 <gazebo reference="left_eyesupport">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
 <gazebo reference="left_camera">
@@ -174,31 +174,31 @@
 <gazebo reference="right_shoulder_base">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
 <gazebo reference="right_shoulder">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
 <gazebo reference="right_bicep">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 <gazebo reference="right_bicepcover">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 <gazebo reference="right_forarm">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 
@@ -208,31 +208,31 @@
 <gazebo reference="left_shoulder_base">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
 <gazebo reference="left_shoulder">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
 <gazebo reference="left_bicep">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 <gazebo reference="left_bicepcover">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 <gazebo reference="left_forarm">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 
@@ -242,139 +242,151 @@
 <gazebo reference="right_hand">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
-<gazebo reference="right_thumb1">
+<gazebo reference="right_thumb_meta">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
-<gazebo reference="right_thumb2">
+<gazebo reference="right_thumb_prox">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="right_index1">
+<gazebo reference="right_thumb_dist">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="right_index2">
+<gazebo reference="right_index_prox">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="right_index3">
+<gazebo reference="right_index_mid">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="right_middle1">
+<gazebo reference="right_index_dist">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="right_middle2">
+<gazebo reference="right_middle_prox">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="right_middle3">
+<gazebo reference="right_middle_mid">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="right_ring1">
+<gazebo reference="right_middle_dist">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="right_ring2">
+<gazebo reference="right_ring_meta">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
-<gazebo reference="right_ring3">
+<gazebo reference="right_ring_prox">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="right_ring4">
+<gazebo reference="right_ring_mid">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="right_pinky1">
+<gazebo reference="right_ring_dist">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="right_pinky2">
+<gazebo reference="right_pinky_meta">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
-<gazebo reference="right_pinky3">
+<gazebo reference="right_pinky_prox">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="right_pinky4">
+<gazebo reference="right_pinky_mid">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
+</gazebo>
+
+<gazebo reference="right_pinky_dist">
+  <mu1>0.3</mu1>
+  <mu2>0.3</mu2>
+  <material>Gazebo/Grey</material>
+</gazebo>
+
+<gazebo reference="left_handcover">
+  <mu1>0.3</mu1>
+  <mu2>0.3</mu2>
+  <material>Gazebo/White</material>
 </gazebo>
 
 <gazebo reference="right_cover_handring">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 <gazebo reference="right_cover_handpinky">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 <gazebo reference="right_cover_thumb">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 <gazebo reference="right_cover_index">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 <gazebo reference="right_cover_ring">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 <gazebo reference="right_cover_pinky">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 
@@ -384,139 +396,151 @@
 <gazebo reference="left_hand">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
-<gazebo reference="left_thumb1">
+<gazebo reference="left_thumb_meta">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
-<gazebo reference="left_thumb2">
+<gazebo reference="left_thumb_prox">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="left_index1">
+<gazebo reference="left_thumb_dist">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="left_index2">
+<gazebo reference="left_index_prox">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="left_index3">
+<gazebo reference="left_index_mid">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="left_middle1">
+<gazebo reference="left_index_dist">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="left_middle2">
+<gazebo reference="left_middle_prox">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="left_middle3">
+<gazebo reference="left_middle_mid">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="left_ring1">
+<gazebo reference="left_middle_dist">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="left_ring2">
+<gazebo reference="left_ring_meta">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
-<gazebo reference="left_ring3">
+<gazebo reference="left_ring_prox">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="left_ring4">
+<gazebo reference="left_ring_mid">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="left_pinky1">
+<gazebo reference="left_ring_dist">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="left_pinky2">
+<gazebo reference="left_pinky_meta">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
-<gazebo reference="left_pinky3">
+<gazebo reference="left_pinky_prox">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
 </gazebo>
 
-<gazebo reference="left_pinky4">
+<gazebo reference="left_pinky_mid">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/DarkGrey</material>
+  <material>Gazebo/Grey</material>
+</gazebo>
+
+<gazebo reference="left_pinky_dist">
+  <mu1>0.3</mu1>
+  <mu2>0.3</mu2>
+  <material>Gazebo/Grey</material>
+</gazebo>
+
+<gazebo reference="left_handcover">
+  <mu1>0.3</mu1>
+  <mu2>0.3</mu2>
+  <material>Gazebo/White</material>
 </gazebo>
 
 <gazebo reference="left_cover_handring">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 <gazebo reference="left_cover_handpinky">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 <gazebo reference="left_cover_thumb">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 <gazebo reference="left_cover_index">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 <gazebo reference="left_cover_ring">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 <gazebo reference="left_cover_pinky">
   <mu1>0.3</mu1>
   <mu2>0.3</mu2>
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/White</material>
 </gazebo>
 
 </robot>
