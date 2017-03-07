@@ -17,12 +17,12 @@
 					right_shoulder_side_position_controller
 					right_shoulder_up_position_controller
 					right_bicep_rotate_position_controller
-					right_bicep_position_controller
+					right_elbow_position_controller
 					left_shoulder_side_position_controller
 					left_shoulder_up_position_controller
 					left_bicep_rotate_position_controller
-					left_bicep_position_controller
-					right_thumb_position_controller
+					left_elbow_position_controller
+                    right_thumb_position_controller
 					right_index_position_controller
 					right_middle_position_controller
 					right_ring_position_controller
@@ -34,7 +34,31 @@
 					left_ring_position_controller
 					left_pinky_position_controller
 					left_hand_position_controller
-  "/>
+                    right_thumbCMC_position_controller
+                    right_thumbIP_position_controller
+                    right_indexMCP_position_controller
+                    right_indexDIP_position_controller
+                    right_middleMCP_position_controller
+                    right_middleDIP_position_controller
+                    right_ringCMC_position_controller
+                    right_ringPIP_position_controller
+                    right_ringDIP_position_controller
+                    right_pinkyCMC_position_controller
+                    right_pinkyPIP_position_controller
+                    right_pinkyDIP_position_controller
+                    left_thumbCMC_position_controller
+                    left_thumbIP_position_controller
+                    left_indexMCP_position_controller
+                    left_indexDIP_position_controller
+                    left_middleMCP_position_controller
+                    left_middleDIP_position_controller
+                    left_ringCMC_position_controller
+                    left_ringPIP_position_controller
+                    left_ringDIP_position_controller
+                    left_pinkyCMC_position_controller
+                    left_pinkyPIP_position_controller
+                    left_pinkyDIP_position_controller
+"/>
 
   <!-- convert joint states to TF transforms for rviz, etc -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
