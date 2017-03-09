@@ -1235,7 +1235,7 @@
   </joint>
   <joint name="right_ringCMC" type="revolute">
     <axis xyz="0 0 1"/>
-    <limit effort="1.9613" lower="-1.57" upper="1.57" velocity="6.545"/>
+    <limit effort="1.9613" lower="-1.57" upper="0" velocity="6.545"/>
     <origin rpy="0 -0.7 3.1415" xyz="0.00705 0 -0.0794"/>
     <mimic joint="right_ringMCP" multiplier="-0.1" offset="0"/>
     <parent link="right_hand"/>
@@ -1243,7 +1243,7 @@
   </joint>
   <joint name="right_ringMCP" type="revolute">
     <axis xyz="1 0 0"/>
-    <limit effort="1.9613" lower="-1.57" upper="1.5" velocity="6.545"/>
+    <limit effort="1.9613" lower="0" upper="1.5" velocity="6.545"/>
     <origin rpy="0 0.7775 0" xyz="-0.0351 0.00126 -0.0166"/>
     <parent link="right_ring_meta"/>
     <child link="right_ring_prox"/>
@@ -1251,7 +1251,7 @@
   </joint>
   <joint name="right_ringPIP" type="revolute">
     <axis xyz="1 0 0"/>
-    <limit effort="1.9613" lower="-1.57" upper="1.57" velocity="6.545"/>
+    <limit effort="1.9613" lower="0" upper="1.57" velocity="6.545"/>
     <origin rpy="0 0 0" xyz="0 0.0005 -0.0345"/>
     <mimic joint="right_ringMCP" multiplier="1" offset="0"/>
     <parent link="right_ring_prox"/>
@@ -1259,7 +1259,7 @@
   </joint>
   <joint name="right_ringDIP" type="revolute">
     <axis xyz="1 0 0"/>
-    <limit effort="1.9613" lower="-1.57" upper="1.57" velocity="6.545"/>
+    <limit effort="1.9613" lower="0" upper="1.57" velocity="6.545"/>
     <origin rpy="0 0 0" xyz="0 0.0004 -0.0229"/>
     <mimic joint="right_ringMCP" multiplier="1" offset="0"/>
     <parent link="right_ring_mid"/>

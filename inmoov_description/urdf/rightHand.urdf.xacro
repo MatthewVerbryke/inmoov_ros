@@ -533,7 +533,7 @@
     <axis xyz="0 0 1"/>
     <limit effort="1.9613" lower="-1.57" upper="0" velocity="6.545"/>
     <origin rpy="0 -0.7 3.1415" xyz="0.00705 0 -0.0794"/>
-    <mimic joint="right_ringMCP" multiplier="-0.1" offset="0"/>
+    <mimic joint="right_ringMCP" multiplier="0.1" offset="0"/>
     <parent link="right_hand"/>
     <child link="right_ring_meta"/>
   </joint>
@@ -573,7 +573,7 @@
     <axis xyz="0 0 1"/>
     <limit effort="1.9613" lower="-1.57" upper="0" velocity="6.545"/>
     <origin rpy="0 -0.7 3.1415" xyz="0.027 0 -0.0555"/>
-    <mimic joint="right_pinkyMCP" multiplier="-0.1" offset="0"/>
+    <mimic joint="right_pinkyMCP" multiplier="0.1" offset="0"/>
     <parent link="right_hand"/>
     <child link="right_pinky_meta"/>
   </joint>
