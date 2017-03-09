@@ -6,10 +6,10 @@ This repository contains a *work-in-progress* InMoov software stack, being used 
 
 Currently, it contains the following:
  - Gazebo compatable URDF model of the InMoov robot, adapted from <https://github.com/alansrobotlab/inmoov_ros>
- ..* collision meshes based on .stl files
- ..* estimated inertial properties (moments of inertia and masses)
- ..* estimated damping and friction properties
- ..* transmission elements defined for all actuating joints
+  - Collision meshes based on .stl files
+  - Estimated inertial properties (moments of inertia and masses)
+  - Estimated damping and friction properties
+  - Transmission elements defined for all actuating joints
  - Controllers implimented for all actuated joints
  - Package for use with Gazebo
 
