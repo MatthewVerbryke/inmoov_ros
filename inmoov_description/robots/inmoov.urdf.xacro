@@ -105,7 +105,7 @@
 
   <joint name="head_updown" type="revolute">
    <axis xyz="1 0 0"/>
-   <limit effort="2.422" lower="-0.30" upper="0.30" velocity="7.48"/>
+   <limit effort="2.422" lower="-1.22" upper="1.22" velocity="7.48"/>
    <origin rpy="0 0 0" xyz="0 0 0"/>
    <parent link="head_tilt"/>
    <child link="head_base"/>

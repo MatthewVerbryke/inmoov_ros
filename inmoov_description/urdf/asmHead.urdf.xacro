@@ -129,7 +129,7 @@
 
   <joint name="head_leftright" type="revolute">
    <axis xyz="0 0 1"/>
-   <limit effort="2.422" lower="-1.57" upper="1.57" velocity="7.48"/>
+   <limit effort="2.422" lower="-1.05" upper="1.05" velocity="7.48"/>
    <origin rpy="0 0 0" xyz="0 0 0.0245"/>
    <parent link="head_base"/>
    <child link="head"/>
@@ -139,7 +139,7 @@
 
   <joint name="jaw" type="revolute">
    <axis xyz="1 0 0"/>
-   <limit effort="1.9613" lower="0" upper="0.15" velocity="6.545"/>
+   <limit effort="1.9613" lower="0" upper="0.261" velocity="6.545"/>
    <origin rpy="0.085 0 3.1415" xyz="-0.001 0.0375 0.0437"/>
    <parent link="head"/>
    <child link="jaw"/>

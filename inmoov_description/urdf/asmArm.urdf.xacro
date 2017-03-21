@@ -116,7 +116,7 @@
 
   <joint name="${side}_bicep_rotate" type="revolute">
     <axis xyz="0 0 1"/>
-    <limit effort="2.422" lower="-1.57" upper="1.57" velocity="7.48"/>
+    <limit effort="2.422" lower="-0.872" upper="1.57" velocity="7.48"/>
     <origin rpy="0 0 0" xyz="${flip * 0.066} 0 -0.060"/>
     <parent link="${side}_shoulder"/>
     <child link="${side}_bicep"/>

@@ -117,6 +117,28 @@
   </link>
 
 
+  <link name="kinectIR">
+    <visual>
+      <geometry>
+        <cylinder length="0.005" radius="0.011"/>
+      </geometry> 
+      <origin rpy="0 1.5708 0" xyz="0 0 0"/>
+      <xacro:frame_color/>
+    </visual>
+  </link>
+
+
+  <link name="kinectIR_frame">
+    <visual>
+      <geometry>
+        <cylinder length="0.001" radius="0.001"/>
+      </geometry> 
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <xacro:frame_color/>
+    </visual>
+  </link>
+
+
   <link name="chestplate">
     <visual>
       <geometry>
@@ -177,6 +199,20 @@
     <origin rpy="0 0 0" xyz="0 0 0.066"/>
     <parent link="torso"/>
     <child link="kinect"/>
+  </joint>
+
+
+  <joint name="kinect_ircamera" type="fixed">
+    <origin rpy="0 0 1.5708" xyz="-0.015 0.08 0.042"/>
+    <parent link="kinect"/>
+    <child link="kinectIR"/>
+  </joint>
+
+
+  <joint name="kinect_ircamera_frame" type="fixed">
+    <origin rpy="-1.5708 0 -1.5708" xyz="0 0 0"/>
+    <parent link="kinectIR"/>
+    <child link="kinectIR_frame"/>
   </joint>
 
 
