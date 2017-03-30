@@ -1,10 +1,10 @@
-##inmoov_gazebo
+## inmoov_gazebo
 
-###Summary
+### Summary
 
 This package contains the files nedded to launch Gazebo with the InMoov robot. This includes the launch files (launch/), and the world files (world/).
 
-###Directions
+### Directions
 
 to launch an empty world with only the Inmoov robot:
 

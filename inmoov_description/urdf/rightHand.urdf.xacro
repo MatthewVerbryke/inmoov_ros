@@ -89,7 +89,7 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
-    <collision>
+    <collision name='rthumb_collision'>
       <geometry>
         <mesh filename="package://inmoov_description/meshes/thumb5_3.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -161,7 +161,7 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
-    <collision>
+    <collision name='rindex_collision'>
       <geometry>
         <mesh filename="package://inmoov_description/meshes/index3_3.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -233,7 +233,7 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
-    <collision>
+    <collision name='rmiddle_collision'>
       <geometry>
         <mesh filename="package://inmoov_description/meshes/middle3_3.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -329,7 +329,7 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
-    <collision>
+    <collision name='rring_collision'>
       <geometry>
         <mesh filename="package://inmoov_description/meshes/ring3_4.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -425,7 +425,7 @@
         <color rgba="0.25 0.25 0.25 1"/>
       </material>
     </visual>
-    <collision>
+    <collision name='rpinky_collision'>
       <geometry>
         <mesh filename="package://inmoov_description/meshes/pinky3_4.stl" scale="0.001 0.001 0.001"/>
       </geometry>

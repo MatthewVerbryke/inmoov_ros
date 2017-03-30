@@ -126,12 +126,151 @@
 <!--TOUCH SENSORS-->
 
 
+<gazebo reference="left_thumb_dist">
+  <sensor name="lthumb_contact" type="contact">
+    <always_on>true</always_on>
+    <update_rate>30</update_rate>
+    <contact>
+      <collision>left_thumb_dist_fixed_joint_lump__lthumb_collision_collision</collision>
+    </contact>
+    <plugin name="lthumb_contact_plugin" filename="libgazebo_ros_bumper.so">
+      <bumperTopicName>lthumb_contact_state</bumperTopicName>
+      <frameName>left_thumb_dist</frameName>
+    </plugin>
+  </sensor>
+</gazebo>
 
+<gazebo reference="left_index_dist">
+  <sensor name="lindex_contact" type="contact">
+    <always_on>true</always_on>
+    <update_rate>30</update_rate>
+    <contact>
+      <collision>left_index_dist_fixed_joint_lump__lindex_collision_collision</collision>
+    </contact>
+    <plugin name="lindex_contact_plugin" filename="libgazebo_ros_bumper.so">
+      <bumperTopicName>lindex_contact_state</bumperTopicName>
+      <frameName>left_index_dist</frameName>
+    </plugin>
+  </sensor>
+</gazebo>
+
+<gazebo reference="left_middle_dist">
+  <sensor name="lmiddle_contact" type="contact">
+    <always_on>true</always_on>
+    <update_rate>30</update_rate>
+    <contact>
+      <collision>left_middle_dist_fixed_joint_lump__lmiddle_collision_collision</collision>
+    </contact>
+    <plugin name="lmiddle_contact_plugin" filename="libgazebo_ros_bumper.so">
+      <bumperTopicName>lmiddle_contact_state</bumperTopicName>
+      <frameName>left_middle_dist</frameName>
+    </plugin>
+  </sensor>
+</gazebo>
+
+<gazebo reference="left_ring_dist">
+  <sensor name="lring_contact" type="contact">
+    <always_on>true</always_on>
+    <update_rate>30</update_rate>
+    <contact>
+      <collision>left_ring_dist_fixed_joint_lump__lring_collision_collision</collision>
+    </contact>
+    <plugin name="lring_contact_plugin" filename="libgazebo_ros_bumper.so">
+      <bumperTopicName>lring_contact_state</bumperTopicName>
+      <frameName>left_ring_dist</frameName>
+    </plugin>
+  </sensor>
+</gazebo>
+
+<gazebo reference="left_pinky_dist">
+  <sensor name="lpinky_contact" type="contact">
+    <always_on>true</always_on>
+    <update_rate>30</update_rate>
+    <contact>
+      <collision>left_pinky_dist_fixed_joint_lump__lpinky_collision_collision</collision>
+    </contact>
+    <plugin name="lpinky_contact_plugin" filename="libgazebo_ros_bumper.so">
+      <bumperTopicName>lpinky_contact_state</bumperTopicName>
+      <frameName>left_pinky_dist</frameName>
+    </plugin>
+  </sensor>
+</gazebo>
+
+
+<gazebo reference="right_thumb_dist">
+  <sensor name="rthumb_contact" type="contact">
+    <always_on>true</always_on>
+    <update_rate>30</update_rate>
+    <contact>
+      <collision>right_thumb_dist_fixed_joint_lump__rthumb_collision_collision</collision>
+    </contact>
+    <plugin name="rthumb_contact_plugin" filename="libgazebo_ros_bumper.so">
+      <bumperTopicName>rthumb_contact_state</bumperTopicName>
+      <frameName>right_thumb_dist</frameName>
+    </plugin>
+  </sensor>
+</gazebo>
+
+<gazebo reference="right_index_dist">
+  <sensor name="rindex_contact" type="contact">
+    <always_on>true</always_on>
+    <update_rate>30</update_rate>
+    <contact>
+      <collision>right_index_dist_fixed_joint_lump__rindex_collision_collision</collision>
+    </contact>
+    <plugin name="rindex_contact_plugin" filename="libgazebo_ros_bumper.so">
+      <bumperTopicName>rindex_contact_state</bumperTopicName>
+      <frameName>right_index_dist</frameName>
+    </plugin>
+  </sensor>
+</gazebo>
+
+<gazebo reference="right_middle_dist">
+  <sensor name="rmiddle_contact" type="contact">
+    <always_on>true</always_on>
+    <update_rate>30</update_rate>
+    <contact>
+      <collision>right_middle_dist_fixed_joint_lump__rmiddle_collision_collision</collision>
+    </contact>
+    <plugin name="rmiddle_contact_plugin" filename="libgazebo_ros_bumper.so">
+      <bumperTopicName>rmiddle_contact_state</bumperTopicName>
+      <frameName>right_middle_dist</frameName>
+    </plugin>
+  </sensor>
+</gazebo>
+
+<gazebo reference="right_ring_dist">
+  <sensor name="rring_contact" type="contact">
+    <always_on>true</always_on>
+    <update_rate>30</update_rate>
+    <contact>
+      <collision>right_ring_dist_fixed_joint_lump__rring_collision_collision</collision>
+    </contact>
+    <plugin name="rring_contact_plugin" filename="libgazebo_ros_bumper.so">
+      <bumperTopicName>rring_contact_state</bumperTopicName>
+      <frameName>right_ring_dist</frameName>
+    </plugin>
+  </sensor>
+</gazebo>
+
+<gazebo reference="right_pinky_dist">
+  <sensor name="rpinky_contact" type="contact">
+    <always_on>true</always_on>
+    <update_rate>30</update_rate>
+    <contact>
+      <collision>right_pinky_dist_fixed_joint_lump__rpinky_collision_collision</collision>
+    </contact>
+    <plugin name="rpinky_contact_plugin" filename="libgazebo_ros_bumper.so">
+      <bumperTopicName>rpinky_contact_state</bumperTopicName>
+      <frameName>right_pinky_dist</frameName>
+    </plugin>
+  </sensor>
+</gazebo>
 
 
 <!--PIR SENSOR-->
 
-<!--not currently possible(?)-->
+ <!--not currently possible(?)-->
 
 
 
