@@ -1,0 +1,10 @@
+<!-- Copyright 2017 University of Cincinnati
+     All rights reserved. See LICENSE file at:
+     https://github.com/MatthewVerbryke/inmoov-ros
+     Additional copyright may be held by others, as reflected in the commit history.-->
+
+<launch>
+  <!--launch fingermimic.py-->
+  <node name="finger_mimic" pkg="inmoov_control" type="fingermimic.py" output="screen"/>
+
+</launch>
