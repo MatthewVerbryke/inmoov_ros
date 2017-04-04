@@ -11,7 +11,7 @@
   <link name="left_hand">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_hand.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_hand.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <material name="cframe">
@@ -20,7 +20,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_hand.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_hand.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </collision>
@@ -35,7 +35,7 @@
   <link name="left_thumb_meta">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_thumb5_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_thumb5_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="3.1415 0 0" xyz="0 0 0"/>
       <material name="cframe">
@@ -44,7 +44,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_thumb5_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_thumb5_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="3.1415 0 0" xyz="0 0 0"/>
     </collision>
@@ -59,7 +59,7 @@
   <link name="left_thumb_prox">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/thumb5_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/thumb5_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
       <material name="cframe">
@@ -68,7 +68,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/thumb5_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/thumb5_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
     </collision>
@@ -83,7 +83,7 @@
   <link name="left_thumb_dist">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/thumb5_3.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/thumb5_3.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
       <material name="cframe">
@@ -92,7 +92,7 @@
     </visual>
     <collision name='lthumb_collision'>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/thumb5_3.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/thumb5_3.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
     </collision>
@@ -107,7 +107,7 @@
   <link name="left_index_prox">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/index3_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/index3_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
       <material name="cframe">
@@ -116,7 +116,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/index3_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/index3_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
     </collision>
@@ -131,7 +131,7 @@
   <link name="left_index_mid">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/index3_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/index3_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
       <material name="cframe">
@@ -140,7 +140,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/index3_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/index3_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
     </collision>
@@ -155,7 +155,7 @@
   <link name="left_index_dist">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/index3_3.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/index3_3.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
       <material name="cframe">
@@ -164,7 +164,7 @@
     </visual>
     <collision name='lindex_collision'>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/index3_3.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/index3_3.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
     </collision>
@@ -179,7 +179,7 @@
   <link name="left_middle_prox">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/middle3_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/middle3_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
       <material name="cframe">
@@ -188,7 +188,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/middle3_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/middle3_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
     </collision>
@@ -203,7 +203,7 @@
   <link name="left_middle_mid">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/middle3_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/middle3_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
       <material name="cframe">
@@ -212,7 +212,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/middle3_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/middle3_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
     </collision>
@@ -227,7 +227,7 @@
   <link name="left_middle_dist">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/middle3_3.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/middle3_3.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
       <material name="cframe">
@@ -236,7 +236,7 @@
     </visual>
     <collision name='lmiddle_collision'>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/middle3_3.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/middle3_3.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
     </collision>
@@ -251,7 +251,7 @@
   <link name="left_ring_meta">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_ring3_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_ring3_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
       <material name="cframe">
@@ -260,7 +260,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_ring3_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_ring3_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
     </collision>
@@ -275,7 +275,7 @@
   <link name="left_ring_prox">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/ring3_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/ring3_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
       <material name="cframe">
@@ -284,7 +284,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/ring3_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/ring3_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
     </collision>
@@ -299,7 +299,7 @@
   <link name="left_ring_mid">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/ring3_3.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/ring3_3.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
       <material name="cframe">
@@ -308,7 +308,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/ring3_3.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/ring3_3.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
     </collision>
@@ -323,7 +323,7 @@
   <link name="left_ring_dist">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/ring3_4.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/ring3_4.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
       <material name="cframe">
@@ -332,7 +332,7 @@
     </visual>
     <collision name='lring_collision'>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/ring3_4.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/ring3_4.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
     </collision>
@@ -347,7 +347,7 @@
   <link name="left_pinky_meta">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_pinky3_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_pinky3_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
       <material name="cframe">
@@ -356,7 +356,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_pinky3_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_pinky3_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
     </collision>
@@ -371,7 +371,7 @@
   <link name="left_pinky_prox">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/pinky3_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/pinky3_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
       <material name="cframe">
@@ -380,7 +380,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/pinky3_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/pinky3_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
     </collision>
@@ -395,7 +395,7 @@
   <link name="left_pinky_mid">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/pinky3_3.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/pinky3_3.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
       <material name="cframe">
@@ -404,7 +404,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/pinky3_3.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/pinky3_3.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
     </collision>
@@ -419,7 +419,7 @@
   <link name="left_pinky_dist">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/pinky3_4.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/pinky3_4.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
       <material name="cframe">
@@ -428,7 +428,7 @@
     </visual>
     <collision name='lpinky_collision'>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/pinky3_4.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/pinky3_4.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
     </collision>
@@ -613,7 +613,7 @@
   <link name="left_handcover">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_cover_hand.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_cover_hand.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <material name="ccover">
@@ -622,7 +622,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_cover_hand.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_cover_hand.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </collision>
@@ -637,7 +637,7 @@
   <link name="left_cover_handring">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_cover_handring.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_cover_handring.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
       <material name="ccover">
@@ -646,7 +646,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_cover_handring.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_cover_handring.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
     </collision>
@@ -661,7 +661,7 @@
   <link name="left_cover_handpinky">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_cover_handpinky.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_cover_handpinky.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
       <material name="ccover">
@@ -670,7 +670,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_cover_handpinky.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_cover_handpinky.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
     </collision>
@@ -685,7 +685,7 @@
   <link name="left_cover_thumb">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_cover_thumb.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_cover_thumb.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="3.1415 0 0" xyz="0 0 0"/>
       <material name="ccover">
@@ -694,7 +694,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_cover_thumb.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_cover_thumb.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="3.1415 0 0" xyz="0 0 0"/>
     </collision>
@@ -709,7 +709,7 @@
   <link name="left_cover_index">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_cover_index.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_cover_index.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
       <material name="ccover">
@@ -718,7 +718,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_cover_index.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_cover_index.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
     </collision>
@@ -733,7 +733,7 @@
   <link name="left_cover_middle">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_cover_middle.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_cover_middle.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
       <material name="ccover">
@@ -742,7 +742,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_cover_middle.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_cover_middle.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
     </collision>
@@ -757,7 +757,7 @@
   <link name="left_cover_ring">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_cover_ring.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_cover_ring.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
       <material name="ccover">
@@ -766,7 +766,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_cover_ring.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_cover_ring.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
     </collision>
@@ -781,7 +781,7 @@
   <link name="left_cover_pinky">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_cover_pinky.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_cover_pinky.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
       <material name="ccover">
@@ -790,7 +790,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/left_cover_pinky.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/left_cover_pinky.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 3.1415" xyz="0 0 0"/>
     </collision>

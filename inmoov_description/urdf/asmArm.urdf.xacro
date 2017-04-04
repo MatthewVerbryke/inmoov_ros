@@ -9,7 +9,7 @@
   <link name="${side}_shoulder_base">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/${side}_shoulder_base.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/${side}_shoulder_base.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <xacro:frame_color/>
@@ -25,14 +25,14 @@
   <link name="${side}_shoulder">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/${side}_shoulder.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/${side}_shoulder.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <xacro:frame_color/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/${side}_shoulder.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/${side}_shoulder.stl" scale="0.001 0.001 0.001"/>
       </geometry> 
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </collision>
@@ -47,7 +47,7 @@
   <link name="${side}_bicep">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/bicep.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/bicep.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <xacro:frame_color/>
@@ -63,14 +63,14 @@
   <link name="${side}_bicepcover">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/bicepcover.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/bicepcover.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <xacro:cover_color/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/bicepcover.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/bicepcover.stl" scale="0.001 0.001 0.001"/>
       </geometry> 
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </collision>
@@ -85,14 +85,14 @@
   <link name="${side}_forearm">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/${side}_forearm.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/${side}_forearm.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 0" xyz="${flip * 0.001} 0 0"/>
       <xacro:cover_color/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/${side}_forearm.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/${side}_forearm.stl" scale="0.001 0.001 0.001"/>
       </geometry> 
       <origin rpy="0 0 0" xyz="${flip * 0.001} 0 0"/>
     </collision>

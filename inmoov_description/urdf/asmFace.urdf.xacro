@@ -10,14 +10,14 @@
   <link name="face">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/face.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/face.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <xacro:cover_color/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/face.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/face.stl" scale="0.001 0.001 0.001"/>
       </geometry> 
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </collision>
@@ -42,7 +42,7 @@
   <link name="eyesupport">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/eyesupport.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/eyesupport.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <xacro:frame_color/>
@@ -90,7 +90,7 @@
   <link name="${side}_eyesupport">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/${side}_eyesupport.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/${side}_eyesupport.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <xacro:frame_color/>
@@ -106,7 +106,7 @@
   <link name="${side}_camera">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/camera.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/camera.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <xacro:camera_color/>
@@ -122,7 +122,7 @@
   <link name="${side}_eye">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/eye.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/eye.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <xacro:eyeball_color/>
@@ -138,7 +138,7 @@
   <link name="${side}_iris">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/iris.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/iris.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <xacro:iris_color/>
