@@ -2,7 +2,7 @@
 
 ### Summary
 
-This package contains all the files needed for the URDF model of the InMoov. This includes .stl files (meshes/), .xacro and .gazebo files for the various parts of the robot (urdf/), and the generated .urdf file with its corrosponding master .xacro files (robots/). Also included are the files required to open Rviz and regenerate the URDF after changes are made to the .xacro files.
+This package contains the files needed for the URDF model of the InMoov. This includes the .xacro and .gazebo files for the various parts of the robot (urdf/), and the generated .urdf file with its corrosponding master .xacro files (robots/). Also included are the files required to open Rviz and regenerate the URDF after changes are made to the .xacro files.
 
 ### Directions
 

@@ -6,12 +6,18 @@ This repository contains a *work-in-progress* InMoov software stack, being used 
 
 Currently, it contains the following:
  - Gazebo compatable URDF model of the InMoov robot, adapted from <https://github.com/alansrobotlab/inmoov_ros>
-   - Collision meshes based on .stl files
-   - Estimated inertial properties (moments of inertia and masses)
-   - Estimated damping and friction properties
+   - Collision meshes based on .stl mesh files
+   - Estimated inertial, damping, and friction properties
    - Transmission elements defined for all actuating joints
+   - Sensors implimented in Gazebo
  - Controllers implimented for all actuated joints
+ - A node to replicate a physical InMoov robots finger movement (similar to mimicking in Rviz)
  - Package for use with Gazebo
+
+#### Sensors
+ - Xbox Kinect 
+ - Visual Cameras (one in each eye)
+ - Contact Sensors (one in each fingertip)
 
 ## Packages
 
@@ -19,9 +25,9 @@ Currently, it contains the following:
  - inmoov_description 
  - inmoov_firmware **not currently used**
  - inmoov_gazebo
+ - inmoov_meshes
  - inmoov_msgs **not currently used**
  - inmoov_tools **not currently used**
- - robot_editor **not currently used**
 
 ## Recommended OS/Programs
 
@@ -33,19 +39,19 @@ The software was developed and tested in:
 ## Current Issues
 
  - Inertial, damping, and friction values are estimates
- - Joint mimicking is not supported in Gazebo
- - ~~Right ring and pinky not functioning correctly~~
+ - Might not be able to simulate Passive Infrared (PIR) sensors in Gazebo
 
 ## Future Work
 
- - ~~Fix right ring/pinky issue~~
- - Joint mimicking implimentation
- - Add sensors
  - MoveIt! implimentation
  - Correction of inertial, damping, and friction values (based on experimntally determined values)
+ - PID value adjustment?
  - VREP implimentation?
  - Add handpads for better grip?
 
+## License
+
+All currently-used packages (see above) use the BSD 3-clause license presented in the main license file. The one exception is the inmoov_meshes package, which uses the CC-NC-A license contained within that package.
 
 ###### *yes, this is an acronym
 
