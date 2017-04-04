@@ -1,3 +1,8 @@
+# Copyright 2017 University of Cincinnati
+# All rights reserved. See LICENSE file at:
+# https://github.com/MatthewVerbryke/inmoov-ros
+# Additional copyright may be held by others, as reflected in the commit history.
+
 inmoov:
   # Publish all joint states -----------------------------------
   joint_state_controller:
@@ -273,6 +278,4 @@ inmoov:
     type: effort_controllers/JointPositionController
     joint: left_pinkyDIP
     pid: {p: 10, i: 1, d: 0.1}
-
-
 

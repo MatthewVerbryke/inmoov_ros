@@ -1,4 +1,8 @@
 #!/bin/bash
+# Copyright 2017 University of Cincinnati
+# All rights reserved. See LICENSE file at:
+# https://github.com/MatthewVerbryke/inmoov-ros
+# Additional copyright may be held by others, as reflected in the commit history.
 
 #Source Setup
 cd ~/catkin_ws/
@@ -12,8 +16,3 @@ rm inmoov.urdf
 #Create New Files
 rosrun xacro xacro.py -o inmoov.urdf inmoov.urdf.xacro
 cp inmoov.urdf.xacro inmoov.xacro
-
-
-
-
-

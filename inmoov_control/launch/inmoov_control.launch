@@ -1,5 +1,9 @@
-<launch>
+<!-- Copyright 2017 University of Cincinnati
+     All rights reserved. See LICENSE file at:
+     https://github.com/MatthewVerbryke/inmoov-ros
+     Additional copyright may be held by others, as reflected in the commit history.-->
 
+<launch>
   <!-- Load joint controller configurations from YAML file to parameter server -->
   <rosparam file="$(find inmoov_control)/config/inmoov_control.yaml" command="load"/>
 
@@ -25,7 +29,7 @@
                     right_thumb_position_controller
 					right_index_position_controller
 					right_middle_position_controller
-					right_ring_position_controller
+                    right_ring_position_controller
 					right_pinky_position_controller
 					right_hand_position_controller
 					left_thumb_position_controller

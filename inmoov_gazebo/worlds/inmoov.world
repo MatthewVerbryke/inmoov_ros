@@ -1,3 +1,8 @@
+<!-- Copyright 2017 University of Cincinnati
+     All rights reserved. See LICENSE file at:
+     https://github.com/MatthewVerbryke/inmoov-ros
+     Additional copyright may be held by others, as reflected in the commit history.-->
+
 <?xml version="1.0"?>
 <sdf version="1.4">
   <world name="default">
