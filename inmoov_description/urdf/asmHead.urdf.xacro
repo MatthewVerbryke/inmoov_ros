@@ -10,7 +10,7 @@
   <link name="head_base">
     <visual>
       <geometry>
-        <mesh filename="package://inmoov_description/meshes/head_base.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://inmoov_meshes/meshes/head_base.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <xacro:frame_color/>
