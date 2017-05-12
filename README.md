@@ -53,5 +53,8 @@ The software was developed and tested in:
 
 All currently-used packages (see above) use the BSD 3-clause license presented in the main license file. The one exception is the inmoov_meshes package, which uses the CC-NC-A license contained within that package.
 
+The original branch is Copyright (c) Alan Timm (alansrobotlab).
+All modifications are Copyright (c) University of Cincinnati.
+
 ###### *yes, this is an acronym
 
