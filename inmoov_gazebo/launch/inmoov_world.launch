@@ -6,7 +6,7 @@
 <launch>
 
   <!-- these are the arguments you can pass this launch file, for example paused:=true -->
-  <arg name="paused" default="true"/>
+  <arg name="paused" default="false"/>
   <arg name="use_sim_time" default="true"/>
   <arg name="gui" default="true"/>
   <arg name="headless" default="false"/>
@@ -32,6 +32,6 @@
 
   <!-- launch files -->
   <include file="$(find inmoov_control)/launch/inmoov_control.launch"/>
-  <include file="$(find inmoov_control)/launch/finger_mimic.launch"/>
+  <!--include file="$(find inmoov_control)/launch/finger_mimic.launch"/-->
 
 </launch>

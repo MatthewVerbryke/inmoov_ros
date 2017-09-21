@@ -9,35 +9,16 @@
 
   <!-- load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-    output="screen" ns="/inmoov" args=" joint_state_controller 
-					head_tilt_position_controller   	
-					head_updown_position_controller 
-					head_leftright_position_controller 
+    output="screen" ns="/inmoov" args=" joint_state_controller
+                    right_arm_controller
+                    left_arm_controller
+                    head_controller	
+                    hip_controller
+                    r_hand_controller
+                    l_hand_controller
 					jaw_position_controller
 					eyes_updown_position_controller
 					eye_leftright_position_controller
-					waist_rotate_position_controller
-					waist_lean_position_controller
-					right_shoulder_side_position_controller
-					right_shoulder_up_position_controller
-					right_bicep_rotate_position_controller
-					right_elbow_position_controller
-					left_shoulder_side_position_controller
-					left_shoulder_up_position_controller
-					left_bicep_rotate_position_controller
-					left_elbow_position_controller
-                    right_thumb_position_controller
-					right_index_position_controller
-					right_middle_position_controller
-                    right_ring_position_controller
-					right_pinky_position_controller
-					right_hand_position_controller
-					left_thumb_position_controller
-					left_index_position_controller
-					left_middle_position_controller
-					left_ring_position_controller
-					left_pinky_position_controller
-					left_hand_position_controller
                     right_thumbCMC_position_controller
                     right_thumbIP_position_controller
                     right_indexMCP_position_controller
@@ -62,6 +43,7 @@
                     left_pinkyCMC_position_controller
                     left_pinkyPIP_position_controller
                     left_pinkyDIP_position_controller
+                    
 "/>
 
   <!-- convert joint states to TF transforms for rviz, etc -->

@@ -4,27 +4,63 @@
 # Additional copyright may be held by others, as reflected in the commit history.
 
 inmoov:
-  # Publish all joint states -----------------------------------
+ # Publish all joint states ------------------------------------
   joint_state_controller:
     type: joint_state_controller/JointStateController
-    publish_rate: 50  
+    publish_rate: 50
+
+ #Trajectory Controllers----------------------------------------
+  right_arm_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - right_shoulder_side
+      - right_shoulder_up
+      - right_bicep_rotate
+      - right_elbow
+      - right_wrist
+
+  left_arm_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - left_shoulder_side
+      - left_shoulder_up
+      - left_bicep_rotate
+      - left_elbow
+      - left_wrist
+
+  head_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - head_tilt
+      - head_updown
+      - head_leftright
+
+  hip_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - waist_rotate
+      - waist_lean
   
-  # Position Controllers ---------------------------------------
-  head_tilt_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: head_tilt
-    pid: {p: 50.0, i: 0.1, d: 1.0}
+  r_hand_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - right_indexPIP
+      - right_middlePIP
+      - right_pinkyMCP
+      - right_ringMCP
+      - right_thumbMCP
 
-  head_updown_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: head_updown
-    pid: {p: 50.0, i: 0.1, d: 1.0}
+  l_hand_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - left_indexPIP
+      - left_middlePIP
+      - left_pinkyMCP
+      - left_ringMCP
+      - left_thumbMCP
 
-  head_leftright_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: head_leftright
-    pid: {p: 50.0, i: 0.1, d: 1.0}
-
+ # Position Controllers ----------------------------------------
+  # Head
   jaw_position_controller:
     type: effort_controllers/JointPositionController
     joint: jaw
@@ -40,124 +76,8 @@ inmoov:
     joint: eye_leftright
     pid: {p: 1.0, i: 0.01, d: 0}
 
-
-  waist_rotate_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: waist_rotate
-    pid: {p: 50.0, i: 0.1, d: 1.0}
-
-  waist_lean_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: waist_lean
-    pid: {p: 50.0, i: 0.1, d: 1.0}
-
-
-  right_shoulder_side_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: right_shoulder_side
-    pid: {p: 50.0, i: 0.1, d: 1.0}
-
-  right_shoulder_up_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: right_shoulder_up
-    pid: {p: 50.0, i: 0.1, d: 1.0}
-
-  right_bicep_rotate_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: right_bicep_rotate
-    pid: {p: 50.0, i: 0.1, d: 1.0}
-
-  right_elbow_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: right_elbow
-    pid: {p: 50.0, i: 0.1, d: 1.0}
-
-
-  left_shoulder_side_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: left_shoulder_side
-    pid: {p: 50.0, i: 0.1, d: 1.0}
-
-  left_shoulder_up_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: left_shoulder_up
-    pid: {p: 50.0, i: 0.1, d: 1.0}
-
-  left_bicep_rotate_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: left_bicep_rotate
-    pid: {p: 50.0, i: 0.1, d: 1.0}
-
-  left_elbow_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: left_elbow
-    pid: {p: 50.0, i: 0.1, d: 1.0}
-
-
-  right_thumb_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: right_thumbMCP
-    pid: {p: 10, i: 1, d: 0.1}
-
-  right_index_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: right_indexPIP
-    pid: {p: 10, i: 1, d: 0.1}
-
-  right_middle_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: right_middlePIP
-    pid: {p: 10, i: 1, d: 0.1}
-
-  right_ring_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: right_ringMCP
-    pid: {p: 10, i: 1, d: 0.1}
-
-  right_pinky_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: right_pinkyMCP
-    pid: {p: 10, i: 1, d: 0.1}
-
-  right_hand_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: right_wrist
-    pid: {p: 10, i: 1, d: 0.1}
-
-
-  left_thumb_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: left_thumbMCP
-    pid: {p: 10, i: 1, d: 0.1}
-
-  left_index_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: left_indexPIP
-    pid: {p: 10, i: 1, d: 0.1}
-
-  left_middle_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: left_middlePIP
-    pid: {p: 10, i: 1, d: 0.1}
-
-  left_ring_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: left_ringMCP
-    pid: {p: 10, i: 1, d: 0.1}
-
-  left_pinky_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: left_pinkyMCP
-    pid: {p: 10, i: 1, d: 0.1}
-
-  left_hand_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: left_wrist
-    pid: {p: 10, i: 1, d: 0.1}
-
-
-  #"Fake" Scaled Position Controllers
-
+ # "Fake" Scaled Position Controllers---------------------------
+  # Right
   right_thumbCMC_position_controller:
     type: effort_controllers/JointPositionController
     joint: right_thumbCMC
@@ -218,7 +138,7 @@ inmoov:
     joint: right_pinkyDIP
     pid: {p: 10, i: 1, d: 0.1}
 
-
+  # Left
   left_thumbCMC_position_controller:
     type: effort_controllers/JointPositionController
     joint: left_thumbCMC
@@ -278,4 +198,5 @@ inmoov:
     type: effort_controllers/JointPositionController
     joint: left_pinkyDIP
     pid: {p: 10, i: 1, d: 0.1}
+
 
