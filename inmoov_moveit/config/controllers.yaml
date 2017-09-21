@@ -1,0 +1,57 @@
+controller_manager_ns: ''
+controller_list:
+  - name: inmoov/right_arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - right_shoulder_side
+      - right_shoulder_up
+      - right_bicep_rotate
+      - right_elbow
+      - right_wrist
+  - name: inmoov/left_arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - left_shoulder_side
+      - left_shoulder_up
+      - left_bicep_rotate
+      - left_elbow
+      - left_wrist
+  - name: inmoov/head_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - head_tilt
+      - head_updown
+      - head_leftright
+  - name: inmoov/hip_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - waist_rotate
+      - waist_lean
+  - name: inmoov/r_hand_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - right_indexPIP
+      - right_middlePIP
+      - right_pinkyMCP
+      - right_ringMCP
+      - right_thumbMCP
+  - name: inmoov/l_hand_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - left_indexPIP
+      - left_middlePIP
+      - left_pinkyMCP
+      - left_ringMCP
+      - left_thumbMCP

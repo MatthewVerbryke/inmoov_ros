@@ -1,0 +1,129 @@
+# joint_limits.yaml allows the dynamics properties specified in the URDF to be overwritten or augmented as needed
+# Specific joint properties can be changed with the keys [max_position, min_position, max_velocity, max_acceleration]
+# Joint limits can be turned off with [has_velocity_limits, has_acceleration_limits]
+joint_limits:
+  head_leftright:
+    has_velocity_limits: true
+    max_velocity: 7.48
+    has_acceleration_limits: false
+    max_acceleration: 0
+  head_tilt:
+    has_velocity_limits: true
+    max_velocity: 0.5
+    has_acceleration_limits: false
+    max_acceleration: 0
+  head_updown:
+    has_velocity_limits: true
+    max_velocity: 7.48
+    has_acceleration_limits: false
+    max_acceleration: 0
+  left_bicep_rotate:
+    has_velocity_limits: true
+    max_velocity: 7.48
+    has_acceleration_limits: false
+    max_acceleration: 0
+  left_elbow:
+    has_velocity_limits: true
+    max_velocity: 7.48
+    has_acceleration_limits: false
+    max_acceleration: 0
+  left_indexPIP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  left_middlePIP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  left_pinkyMCP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  left_ringMCP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  left_shoulder_side:
+    has_velocity_limits: true
+    max_velocity: 7.48
+    has_acceleration_limits: false
+    max_acceleration: 0
+  left_shoulder_up:
+    has_velocity_limits: true
+    max_velocity: 7.48
+    has_acceleration_limits: false
+    max_acceleration: 0
+  left_thumbMCP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  left_wrist:
+    has_velocity_limits: true
+    max_velocity: 5.236
+    has_acceleration_limits: false
+    max_acceleration: 0
+  right_bicep_rotate:
+    has_velocity_limits: true
+    max_velocity: 7.48
+    has_acceleration_limits: false
+    max_acceleration: 0
+  right_elbow:
+    has_velocity_limits: true
+    max_velocity: 7.48
+    has_acceleration_limits: false
+    max_acceleration: 0
+  right_indexPIP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  right_middlePIP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  right_pinkyMCP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  right_ringMCP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  right_shoulder_side:
+    has_velocity_limits: true
+    max_velocity: 7.48
+    has_acceleration_limits: false
+    max_acceleration: 0
+  right_shoulder_up:
+    has_velocity_limits: true
+    max_velocity: 7.48
+    has_acceleration_limits: false
+    max_acceleration: 0
+  right_thumbMCP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  right_wrist:
+    has_velocity_limits: true
+    max_velocity: 5.236
+    has_acceleration_limits: false
+    max_acceleration: 0
+  waist_lean:
+    has_velocity_limits: true
+    max_velocity: 7.48
+    has_acceleration_limits: false
+    max_acceleration: 0
+  waist_rotate:
+    has_velocity_limits: true
+    max_velocity: 7.48
+    has_acceleration_limits: false
+    max_acceleration: 0
