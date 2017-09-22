@@ -5,14 +5,15 @@
 This repository contains a *work-in-progress* InMoov software stack, being used for research into robotic dual-arm manipulation at the University Of Cincinnati's Autonomous Systems for S.P.A.C.E. R.O.B.O.T.I.C.S.* (AS4SR) lab: <https://github.com/AS4SR/general_info/wiki>
 
 Currently, it contains the following:
- - Gazebo compatable URDF model of the InMoov robot, adapted from <https://github.com/alansrobotlab/inmoov_ros>
+ - Gazebo compatable URDF model of the InMoov robot, adapted from Alan Timm's Inmoov project:<https://github.com/alansrobotlab/inmoov_ros>
    - Collision meshes based on .stl mesh files
    - Estimated inertial, damping, and friction properties
    - Transmission elements defined for all actuating joints
-   - Sensors implimented in Gazebo
+   - Sensors implemented in Gazebo
  - Controllers implimented for all actuated joints
  - A node to replicate a physical InMoov robots finger movement (similar to mimicking in Rviz)
- - Package for use with Gazebo
+ - Basic MoveIt! integration
+
 
 #### Sensors
  - Xbox Kinect 
@@ -26,6 +27,7 @@ Currently, it contains the following:
  - inmoov_firmware **not currently used**
  - inmoov_gazebo
  - inmoov_meshes
+ - inmoov_moveit
  - inmoov_msgs **not currently used**
  - inmoov_tools **not currently used**
 
@@ -35,6 +37,7 @@ The software was developed and tested in:
  - Ubuntu 16.04 LTS
  - ROS Kinetic
  - Gazebo 7.0
+ - MoveIt! for ROS Kinetic
 
 ## Current Issues
 
@@ -43,7 +46,7 @@ The software was developed and tested in:
 
 ## Future Work
 
- - MoveIt! implimentation
+ - Finish MoveIt! implimentation
  - Correction of inertial, damping, and friction values (based on experimntally determined values)
  - PID value adjustment?
  - VREP implimentation?
