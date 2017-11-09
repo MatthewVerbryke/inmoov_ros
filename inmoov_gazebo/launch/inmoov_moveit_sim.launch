@@ -1,0 +1,51 @@
+<!-- Copyright 2017 University of Cincinnati
+     All rights reserved. See LICENSE file at:
+     https://github.com/MatthewVerbryke/inmoov-ros
+     Additional copyright may be held by others, as reflected in the commit history.-->
+
+<launch>
+
+  <!-- these are the arguments you can pass this launch file, for example paused:=true -->
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find inmoov_gazebo)/worlds/inmoov.world"/>
+    <arg name="debug" value="$(arg debug)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="headless" value="$(arg headless)"/>
+  </include>
+
+  <!-- Load the URDF into the ROS Parameter Server -->
+  <param name="robot_description"
+    command="$(find xacro)/xacro --inorder '$(find inmoov_description)/robots/inmoov.xacro'"/>
+
+  <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+    args="-urdf -model inmoov -param robot_description"/>
+
+  <!-- launch files -->
+  <include file="$(find inmoov_control)/launch/inmoov_control.launch"/>
+  <!--include file="$(find inmoov_control)/launch/finger_mimic.launch"/-->
+
+  <!-- Octomap Server -->
+  <node pkg="octomap_server" type="octomap_server_node" name="octomap_server">
+	<param name="resolution" value="0.0250" />		
+	<!-- fixed map frame (set to 'map' if SLAM or localization running!) -->
+	<param name="frame_id" type="string" value="world" />		
+	<!-- maximum range to integrate (speedup, accuracy) -->
+	<param name="max_sensor_range" value="5.0" />
+    <param name="filter_ground" value="false" /><!-- who knows where the floor is? -->
+    <param name="base_frame_id" value="base_link" /> <!--needs to be set, even if not used-->		
+	<!-- data source to integrate (PointCloud2) -->
+    <remap from="cloud_in" to="/inmoov/kinect/depth/points" /> <!-- /rtabmap/assembled_clouds -->
+  </node>
+
+</launch>
+

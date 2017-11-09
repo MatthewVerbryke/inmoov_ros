@@ -36,7 +36,7 @@
 
   <!-- Sensors Functionality -->
   <include ns="move_group" file="$(find inmoov_moveit)/launch/sensor_manager.launch.xml" if="$(arg allow_trajectory_execution)">
-    <arg name="moveit_sensor_manager" value="inmoov" />
+    <!--arg name="moveit_sensor_manager" value="inmoov" /-->
   </include>
 
   <!-- Start the actual move_group node/action server -->
