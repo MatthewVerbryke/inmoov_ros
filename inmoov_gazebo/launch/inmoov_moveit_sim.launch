@@ -35,17 +35,20 @@
   <!--include file="$(find inmoov_control)/launch/finger_mimic.launch"/-->
 
   <!-- Octomap Server -->
-  <node pkg="octomap_server" type="octomap_server_node" name="octomap_server">
-	<param name="resolution" value="0.0250" />		
+  <!--node pkg="octomap_server" type="octomap_server_node" name="octomap_server">
+	<param name="resolution" value="0.0250" /-->		
 	<!-- fixed map frame (set to 'map' if SLAM or localization running!) -->
-	<param name="frame_id" type="string" value="world" />		
+	<!--param name="frame_id" type="string" value="world" /-->		
 	<!-- maximum range to integrate (speedup, accuracy) -->
-	<param name="max_sensor_range" value="5.0" />
-    <param name="filter_ground" value="false" /><!-- who knows where the floor is? -->
-    <param name="base_frame_id" value="base_link" /> <!--needs to be set, even if not used-->		
+	<!--param name="max_sensor_range" value="5.0" /-->
+    	<!-- who knows where the floor is? -->
+	<!--param name="filter_ground" value="false" /--> 
+	<!--needs to be set, even if not used-->
+    	<!--param name="base_frame_id" value="base_link" /--> 
 	<!-- data source to integrate (PointCloud2) -->
-    <remap from="cloud_in" to="/inmoov/kinect/depth/points" /> <!-- /rtabmap/assembled_clouds -->
-  </node>
+    	<!--remap from="cloud_in" to="/inmoov/kinect/depth/points" /--> 
+	<!--/rtabmap/assembled_clouds-->
+  <!--/node-->
 
 </launch>
 
