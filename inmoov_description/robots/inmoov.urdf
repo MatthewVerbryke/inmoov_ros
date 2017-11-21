@@ -2555,6 +2555,8 @@
       </plugin>
     </sensor>
   </gazebo>
+  <!--PIR SENSOR-->
+  <!--not currently possible(?)-->
   <!--TOUCH SENSORS-->
   <gazebo reference="left_thumb_dist">
     <sensor name="lthumb_contact" type="contact">
@@ -2686,8 +2688,6 @@
       </plugin>
     </sensor>
   </gazebo>
-  <!--PIR SENSOR-->
-  <!--not currently possible(?)-->
   <!--GAZEBO_ROS_CONTROL PLUGIN-->
   <gazebo>
     <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">

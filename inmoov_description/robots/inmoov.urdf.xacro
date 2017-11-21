@@ -3,13 +3,13 @@
 <robot name="inmoov" xmlns:xacro="http://ros.org/wiki/xacro">
 
   <xacro:include filename="$(find inmoov_description)/urdf/materials.urdf.xacro" />
-  <xacro:include filename="$(find inmoov_description)/urdf/asmBase.urdf.xacro" />
-  <xacro:include filename="$(find inmoov_description)/urdf/asmTorso.urdf.xacro" />
-  <xacro:include filename="$(find inmoov_description)/urdf/asmHead.urdf.xacro" />
-  <xacro:include filename="$(find inmoov_description)/urdf/asmFace.urdf.xacro" />
-  <xacro:include filename="$(find inmoov_description)/urdf/asmArm.urdf.xacro" />
-  <xacro:include filename="$(find inmoov_description)/urdf/rightHand.urdf.xacro" />
-  <xacro:include filename="$(find inmoov_description)/urdf/leftHand.urdf.xacro" />
+  <xacro:include filename="$(find inmoov_description)/urdf/default/asmBase.urdf.xacro" />
+  <xacro:include filename="$(find inmoov_description)/urdf/default/asmTorso.urdf.xacro" />
+  <xacro:include filename="$(find inmoov_description)/urdf/default/asmHead.urdf.xacro" />
+  <xacro:include filename="$(find inmoov_description)/urdf/default/asmFace.urdf.xacro" />
+  <xacro:include filename="$(find inmoov_description)/urdf/default/asmArm.urdf.xacro" />
+  <xacro:include filename="$(find inmoov_description)/urdf/default/rightHand.urdf.xacro" />
+  <xacro:include filename="$(find inmoov_description)/urdf/default/leftHand.urdf.xacro" />
 
 
   <link name="world"/>
@@ -177,7 +177,8 @@
    <dynamics damping="0.7"/>
   </joint>
 
-  <xacro:include filename="$(find inmoov_description)/urdf/sensors.gazebo"/>  
+  <xacro:include filename="$(find inmoov_description)/urdf/emr_sensors.gazebo"/>  
+  <xacro:include filename="$(find inmoov_description)/urdf/contact_sensors.gazebo"/> 
   <xacro:include filename="$(find inmoov_description)/urdf/servos.urdf.xacro"/>
   <xacro:include filename="$(find inmoov_description)/urdf/materials.gazebo"/>
 

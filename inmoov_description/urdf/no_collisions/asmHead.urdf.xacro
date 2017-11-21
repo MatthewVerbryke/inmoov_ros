@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='ASCII'?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="inmoov">
+
+<xacro:include filename="$(find inmoov_description)/urdf/materials.urdf.xacro"/>
+
+<xacro:macro name="head" params="covers">
+
+
+  <link name="head_base">
+    <visual>
+      <geometry>
+        <mesh filename="package://inmoov_meshes/meshes/head_base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <xacro:frame_color/>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0.007 0.015"/>
+      <mass value="2.3e-2"/>
+      <inertia ixx="1e-2" ixy="0" ixz="0" iyy="1e-2" iyz="0" izz="1e-2"/>
+    </inertial>
+  </link>
+
+
+  <link name="head">
+    <visual>
+      <geometry>
+        <mesh filename="package://inmoov_meshes/meshes/head.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <xacro:frame_color/>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0.033 0.020"/>
+      <mass value="1e-1"/>
+      <inertia ixx="1e-2" ixy="0" ixz="0" iyy="1e-2" iyz="0" izz="1e-2"/>
+    </inertial>
+  </link>
+
+
+  <link name="jaw">
+    <visual>
+      <geometry>
+        <mesh filename="package://inmoov_meshes/meshes/jaw.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 3.1415" xyz="0 0 0"/>
+      <xacro:cover_color/>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 3.1415" xyz="0 -0.063 -0.049"/>
+      <mass value="3.1e-2"/>
+      <inertia ixx="1e-2" ixy="0" ixz="0" iyy="1e-2" iyz="0" izz="1e-2"/>
+    </inertial>
+  </link>
+
+
+  <link name="skull">
+    <visual>
+      <geometry>
+        <mesh filename="package://inmoov_meshes/meshes/skull.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0.001 0 0"/>
+      <xacro:cover_color/>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.001 0.016 0.107"/>
+      <mass value="6.6e-2"/>
+      <inertia ixx="1e-2" ixy="0" ixz="0" iyy="1e-2" iyz="0" izz="1e-2"/>
+    </inertial>
+  </link>
+
+
+  <link name="left_ear">
+    <visual>
+      <geometry>
+        <mesh filename="package://inmoov_meshes/meshes/earleftv1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <xacro:frame_color/>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.008 0.004 0.003"/>
+      <mass value="4.5e-2"/>
+      <inertia ixx="1e-2" ixy="0" ixz="0" iyy="1e-2" iyz="0" izz="1e-2"/>
+    </inertial>
+  </link>
+
+
+  <link name="right_ear">
+    <visual>
+      <geometry>
+        <mesh filename="package://inmoov_meshes/meshes/earrightv1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <xacro:frame_color/>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.008 0.004 0.003"/>
+      <mass value="4.5e-2"/>
+      <inertia ixx="1e-2" ixy="0" ixz="0" iyy="1e-2" iyz="0" izz="1e-2"/>
+    </inertial>
+  </link>
+
+
+  <joint name="head_leftright" type="revolute">
+   <axis xyz="0 0 1"/>
+   <limit effort="2.422" lower="-1.05" upper="1.05" velocity="7.48"/>
+   <origin rpy="0 0 0" xyz="0 0 0.0245"/>
+   <parent link="head_base"/>
+   <child link="head"/>
+   <dynamics damping="0.7"/>
+  </joint>
+
+
+  <joint name="jaw" type="revolute">
+   <axis xyz="1 0 0"/>
+   <limit effort="1.9613" lower="0" upper="0.261" velocity="6.545"/>
+   <origin rpy="0.085 0 3.1415" xyz="-0.001 0.0375 0.0437"/>
+   <parent link="head"/>
+   <child link="jaw"/>
+   <dynamics damping="0.7"/>
+  </joint>
+
+
+  <joint name="skull" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.001 0.044 -0.0245"/>
+    <parent link="head"/>
+    <child link="skull"/>
+  </joint>
+
+
+  <joint name="left_ear" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.056 0.035 0.0437"/>
+    <parent link="head"/>
+    <child link="left_ear"/>
+  </joint>
+
+
+  <joint name="right_ear" type="fixed">
+    <origin rpy="0 0 0" xyz="0.056 0.035 0.0437"/>
+    <parent link="head"/>
+    <child link="right_ear"/>
+  </joint>
+
+
+
+</xacro:macro>
+
+</robot>
