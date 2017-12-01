@@ -4,29 +4,45 @@
 # https://github.com/MatthewVerbryke/inmoov-ros
 # Additional copyright may be held by others, as reflected in the commit history.
 
-#-Mimic factors----------#
-#rthumb_fact = [-0.75, 1]
-#rindex_fact = [1, 1]
-#rmiddle_fact = [1, 1]
-#rring_fact = [-0.1, 1, 1]
-#rpinky_fact = [-0.1, 1, 1]
-#lthumb_fact = [0.75, 1]
-#lindex_fact = [1, 1]
-#lmiddle_fact = [1, 1]
-#lring_fact = [0.1, 1, 1]
-#lpinky_fact = [0.1, 1, 1]
 
 import sys
-import rospy
-import thread
 from std_msgs.msg import Float64
+import thread
+
+import rospy
 
 
 class FingerMimicking():
-    def __init__(self):
+    """
+    A ROS node that implements mimic joints for the InMoov's hands in
+    Gazebo. While UDRF and Rviz support mimic joints, Gazebo does not.
+    This node takes the overall finger command angle, calculates
+    the nessecary positions for all of the joints in the finger (based
+    on a 'mimic factor' from the URDF), and then commands these joints
+    to the resulting angle. This should replicate how the fingers work
+    on the actual InMoov hand.
+    
+    Mimic factors for the InMoov hand:
 
+    rthumb_fact = [-0.75, 1]
+    rindex_fact = [1, 1]
+    rmiddle_fact = [1, 1]
+    rring_fact = [-0.1, 1, 1]
+    rpinky_fact = [-0.1, 1, 1]
+    lthumb_fact = [0.75, 1]
+    lindex_fact = [1, 1]
+    lmiddle_fact = [1, 1]
+    lring_fact = [0.1, 1, 1]
+    lpinky_fact = [0.1, 1, 1]
+    
+    NOTE: This is not needed for running on the actual robot.
+    """
+    
+    def __init__(self):
+        """Initialize"""
+        
         # Initialize node
-        rospy.init_node("finger_mimicker")
+        rospy.init_node("finger_joint_mimic")
 
         # Initialize cleanup
         rospy.on_shutdown(self.cleanup)
@@ -45,16 +61,16 @@ class FingerMimicking():
         initstringf = '/inmoov/'
         finalstringf = '/command'
 
-        indep_joint_names = ['right_thumb_position_controller',
-                             'right_index_position_controller',
-                             'right_middle_position_controller',
-                             'right_ring_position_controller',
-                             'right_pinky_position_controller',
-                             'left_thumb_position_controller',
-                             'left_index_position_controller',
-                             'left_middle_position_controller',
-                             'left_ring_position_controller',
-                             'left_pinky_position_controller']
+        indep_joint_names = ['right_thumb_controller',
+                             'right_index_controller',
+                             'right_middle_controller',
+                             'right_ring_controller',
+                             'right_pinky_controller',
+                             'left_thumb_controller',
+                             'left_index_controller',
+                             'left_middle_controller',
+                             'left_ring_controller',
+                             'left_pinky_controller']
 
         dep_joint_names = ['right_thumbCMC_position_controller',
                            'right_thumbIP_position_controller',
@@ -108,16 +124,19 @@ class FingerMimicking():
         self.finger_mimic_command(self.Nd, self.pubf)
 
     def finger_mimic_command(self, N, pub):
+        """Calculate the nessecary command angles for all dependent 
+           finger joints."""
 
-        # Initialize oldgoal:
         oldgoal = []
 
+        # Until ROS shutdown
         while not rospy.is_shutdown():
 
             # Acquire lock
             self.lock.acquire()
 
             try:
+                
                 currentgoal =  [self.Rthumb_command,
                                 self.Rindex_command,
                                 self.Rmiddle_command,
@@ -129,12 +148,14 @@ class FingerMimicking():
                                 self.Lring_command,
                                 self.Lpinky_command]
 
-                if currentgoal == oldgoal:
+                # If the goal position has not changed...
+                if (currentgoal == oldgoal):
                     
-                    # Publish commands
+                    # Continue publishing
                     for i in range(N):
                         pub[i].publish(fingergoal[i])
 
+                # The goal has changed...
                 else:
 
                     # Compute new dependent joint angles
@@ -186,58 +207,59 @@ class FingerMimicking():
                     for i in range(N):
                         pub[i].publish(fingergoal[i])
 
-                    # Set "old goal"
+                    # Set current goal as "old goal"
                     oldgoal = currentgoal
 
             finally:
+                
                 # Release Lock
                 self.lock.release()
 
-    # Subscriber callbacks
     def get_RT_command(self, msg):
+        """Right thumb callback function"""
         self.Rthumb_command = msg.data
 
-
     def get_RI_command(self, msg):
+        """Right index finger callback function"""
         self.Rindex_command = msg.data
 
-
     def get_RM_command(self, msg):
+        """Right middle finger callback function"""
         self.Rmiddle_command = msg.data
 
-
     def get_RR_command(self, msg):
+        """Right ring finger callback function"""
         self.Rring_command = msg.data
 
-
     def get_RP_command(self, msg):
+        """Right pinky finger callback function"""
         self.Rpinky_command = msg.data
 
-
     def get_LT_command(self, msg):
+        """Left thumb callback function"""
         self.Lthumb_command = msg.data
 
-
     def get_LI_command(self, msg):
+        """Left index finger callback function"""
         self.Lindex_command = msg.data
 
-
     def get_LM_command(self, msg):
+        """Left middle finger callback function"""
         self.Lmiddle_command = msg.data
 
-
     def get_LR_command(self, msg):
+        """Left ring finger callback function"""
         self.Lring_command = msg.data
 
-
     def get_LP_command(self, msg):
+        """Left pinky finger callback function"""
         self.Lpinky_command = msg.data
 
-
     def cleanup(self):
+        """Node cleanup function"""
         rospy.loginfo("Shutting down node...")
         rospy.sleep(1)
-
+        
 
 if __name__ == '__main__':
     try:
