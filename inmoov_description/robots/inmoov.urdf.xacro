@@ -142,13 +142,38 @@
   <xacro:rhand side="right" neg="1" covers="yes" />
 
 
+  <link name="right_wrist_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://inmoov_meshes/meshes/virtual.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="cframe">
+        <color rgba="0.25 0.25 0.25 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0.001 0.001"/>
+      <mass value="5.25e-4"/>
+      <inertia ixx="1e-3"  ixy="0"  ixz="0" iyy="1e-3" iyz="0" izz="1e-3" />
+    </inertial>
+  </link>
+
+
   <joint name="right_wrist" type="revolute">
    <axis xyz="0 0 1"/>
    <limit effort="0.9807" lower="-3.14" upper="0" velocity="5.236"/>
    <origin rpy="0 0 0" xyz="-0.01 -0.0144 -0.2885"/>
    <parent link="right_forearm"/>
-   <child link="right_hand"/>
+   <child link="right_wrist_link"/>
    <dynamics damping="0.7"/>
+  </joint>
+
+
+  <joint name="right_wrist_fixed" type="fixed">
+   <origin rpy="0 0 0" xyz="0 0 0"/>
+   <parent link="right_wrist_link"/>
+   <child link="right_hand"/>
   </joint>
 
 
@@ -168,13 +193,38 @@
   <xacro:lhand side="left" neg="-1" covers="yes" />
 
 
+  <link name="left_wrist_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://inmoov_meshes/meshes/virtual.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="cframe">
+        <color rgba="0.25 0.25 0.25 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0.001 0.001"/>
+      <mass value="5.25e-4"/>
+      <inertia ixx="1e-3"  ixy="0"  ixz="0" iyy="1e-3" iyz="0" izz="1e-3" />
+    </inertial>
+  </link>
+
+
   <joint name="left_wrist" type="revolute">
    <axis xyz="0 0 1"/>
    <limit effort="0.9807" lower="0" upper="3.14" velocity="5.236"/>
    <origin rpy="0 0 0" xyz="0.01 -0.0144 -0.2885"/>
    <parent link="left_forearm"/>
-   <child link="left_hand"/>
+   <child link="left_wrist_link"/>
    <dynamics damping="0.7"/>
+  </joint>
+
+
+  <joint name="left_wrist_fixed" type="fixed">
+   <origin rpy="0 0 0" xyz="0 0 0"/>
+   <parent link="left_wrist_link"/>
+   <child link="left_hand"/>
   </joint>
 
   <xacro:include filename="$(find inmoov_description)/urdf/emr_sensors.gazebo"/>  
