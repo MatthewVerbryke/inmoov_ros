@@ -1,5 +1,3 @@
-<!--adapted from https://github.com/wilselby/ROS_quadrotor_simulator/blob/master/quad_3dnav/launch/quad_moveit_sensor_manager.launch.xml-->
-
 <launch>
-  
+
 </launch>

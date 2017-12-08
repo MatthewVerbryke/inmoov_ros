@@ -253,8 +253,6 @@ r_hand:
     - LazyPRMstarkConfigDefault
     - SPARSkConfigDefault
     - SPARStwokConfigDefault
-  projection_evaluator: joints(right_indexPIP,right_middlePIP)
-  longest_valid_segment_fraction: 0.005
 l_hand:
   planner_configs:
     - SBLkConfigDefault
@@ -280,5 +278,3 @@ l_hand:
     - LazyPRMstarkConfigDefault
     - SPARSkConfigDefault
     - SPARStwokConfigDefault
-  projection_evaluator: joints(left_indexPIP,left_middlePIP)
-  longest_valid_segment_fraction: 0.005

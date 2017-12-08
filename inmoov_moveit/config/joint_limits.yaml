@@ -27,7 +27,27 @@ joint_limits:
     max_velocity: 7.48
     has_acceleration_limits: false
     max_acceleration: 0
+  left_indexDIP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  left_indexMCP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
   left_indexPIP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  left_middleDIP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  left_middleMCP:
     has_velocity_limits: true
     max_velocity: 6.545
     has_acceleration_limits: false
@@ -37,12 +57,42 @@ joint_limits:
     max_velocity: 6.545
     has_acceleration_limits: false
     max_acceleration: 0
+  left_pinkyCMC:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  left_pinkyDIP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
   left_pinkyMCP:
     has_velocity_limits: true
     max_velocity: 6.545
     has_acceleration_limits: false
     max_acceleration: 0
+  left_pinkyPIP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  left_ringCMC:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  left_ringDIP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
   left_ringMCP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  left_ringPIP:
     has_velocity_limits: true
     max_velocity: 6.545
     has_acceleration_limits: false
@@ -55,6 +105,16 @@ joint_limits:
   left_shoulder_up:
     has_velocity_limits: true
     max_velocity: 7.48
+    has_acceleration_limits: false
+    max_acceleration: 0
+  left_thumbCMC:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  left_thumbIP:
+    has_velocity_limits: true
+    max_velocity: 6.545
     has_acceleration_limits: false
     max_acceleration: 0
   left_thumbMCP:
@@ -77,7 +137,27 @@ joint_limits:
     max_velocity: 7.48
     has_acceleration_limits: false
     max_acceleration: 0
+  right_indexDIP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  right_indexMCP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
   right_indexPIP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  right_middleDIP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  right_middleMCP:
     has_velocity_limits: true
     max_velocity: 6.545
     has_acceleration_limits: false
@@ -87,12 +167,42 @@ joint_limits:
     max_velocity: 6.545
     has_acceleration_limits: false
     max_acceleration: 0
+  right_pinkyCMC:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  right_pinkyDIP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
   right_pinkyMCP:
     has_velocity_limits: true
     max_velocity: 6.545
     has_acceleration_limits: false
     max_acceleration: 0
+  right_pinkyPIP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  right_ringCMC:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  right_ringDIP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
   right_ringMCP:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  right_ringPIP:
     has_velocity_limits: true
     max_velocity: 6.545
     has_acceleration_limits: false
@@ -105,6 +215,16 @@ joint_limits:
   right_shoulder_up:
     has_velocity_limits: true
     max_velocity: 7.48
+    has_acceleration_limits: false
+    max_acceleration: 0
+  right_thumbCMC:
+    has_velocity_limits: true
+    max_velocity: 6.545
+    has_acceleration_limits: false
+    max_acceleration: 0
+  right_thumbIP:
+    has_velocity_limits: true
+    max_velocity: 6.545
     has_acceleration_limits: false
     max_acceleration: 0
   right_thumbMCP:
