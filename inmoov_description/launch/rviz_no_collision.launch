@@ -4,7 +4,7 @@
      Additional copyright may be held by others, as reflected in the commit history.-->
 
 <launch>
-  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find inmoov_description)/robots/inmoov.xacro'"/>
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find inmoov_description)/robots/inmoov_no_collisions.urdf.xacro'"/>
 
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">	
     <param name="use_gui" value="TRUE"/>
@@ -12,6 +12,6 @@
 
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
 
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find inmoov_description)/inmoov.rviz"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find inmoov_description)/config/inmoov.rviz"/>
 
 </launch>

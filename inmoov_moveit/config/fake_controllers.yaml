@@ -22,6 +22,7 @@ controller_list:
     joints:
       - waist_rotate
       - waist_lean
+<<<<<<< HEAD
   - name: fake_r_hand_controller
     joints:
       - right_indexPIP
@@ -36,3 +37,5 @@ controller_list:
       - left_pinkyMCP
       - left_ringMCP
       - left_thumbMCP
+=======
+>>>>>>> 634610668551a6d8b94040087a2017a49e50d6e6

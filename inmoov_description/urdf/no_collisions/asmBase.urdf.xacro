@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='ASCII'?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="inmoov">
+
+<xacro:include filename="$(find inmoov_description)/urdf/materials.urdf.xacro"/>
+
+<xacro:macro name="base" params="side flip covers">
+
+
+
+</xacro:macro>
+
+</robot>

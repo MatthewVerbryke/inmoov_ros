@@ -1,15 +1,14 @@
-<?xml version="1.0"?>
+<?xml version='1.0' encoding='ASCII'?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="inmoov">
 
-<robot name="inmoov" xmlns:xacro="http://ros.org/wiki/xacro">
-
-  <xacro:include filename="$(find inmoov_description)/urdf/materials.urdf.xacro" />
-  <xacro:include filename="$(find inmoov_description)/urdf/asmBase.urdf.xacro" />
-  <xacro:include filename="$(find inmoov_description)/urdf/asmTorso.urdf.xacro" />
-  <xacro:include filename="$(find inmoov_description)/urdf/asmHead.urdf.xacro" />
-  <xacro:include filename="$(find inmoov_description)/urdf/asmFace.urdf.xacro" />
-  <xacro:include filename="$(find inmoov_description)/urdf/asmArm.urdf.xacro" />
-  <xacro:include filename="$(find inmoov_description)/urdf/rightHand.urdf.xacro" />
-  <xacro:include filename="$(find inmoov_description)/urdf/leftHand.urdf.xacro" />
+  <xacro:include filename="$(find inmoov_description)/urdf/materials.urdf.xacro"/>
+  <xacro:include filename="$(find inmoov_description)/urdf/no_collisions/asmBase.urdf.xacro"/>
+  <xacro:include filename="$(find inmoov_description)/urdf/no_collisions/asmTorso.urdf.xacro"/>
+  <xacro:include filename="$(find inmoov_description)/urdf/no_collisions/asmHead.urdf.xacro"/>
+  <xacro:include filename="$(find inmoov_description)/urdf/no_collisions/asmFace.urdf.xacro"/>
+  <xacro:include filename="$(find inmoov_description)/urdf/no_collisions/asmArm.urdf.xacro"/>
+  <xacro:include filename="$(find inmoov_description)/urdf/no_collisions/rightHand.urdf.xacro"/>
+  <xacro:include filename="$(find inmoov_description)/urdf/no_collisions/leftHand.urdf.xacro"/>
 
 
   <link name="world"/>
@@ -29,19 +28,13 @@
       <origin rpy="0 0 0" xyz="0 0 0.055"/>
       <xacro:base_color/>
     </visual>
-    <collision>
-      <geometry>
-        <cylinder length="0.11" radius="0.26"/>
-      </geometry> 
-      <origin rpy="0 0 0" xyz="0 0 0.055"/>
-    </collision>
-  </link>
+    </link>
 
 
   <joint name="base_to_pedestal" type="fixed">
     <parent link="base_link"/>
     <child link="pedestal"/>
-    <origin rpy="0 0 0"  xyz="0 0 0"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
   </joint>
 
 
@@ -53,16 +46,10 @@
       <origin rpy="0 0 0" xyz="0 0 0.58"/>
       <xacro:base_color/>
     </visual>
-    <collision>
-      <geometry>
-        <cylinder length="0.94" radius="0.0254"/>
-      </geometry> 
-      <origin rpy="0 0 0" xyz="0 0 0.58"/>
-    </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0.58"/>
       <mass value="5"/>
-      <inertia ixx="0.1"  ixy="0"  ixz="0" iyy="0.1" iyz="0" izz="0.1" />
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
     </inertial>
   </link>
 
@@ -78,7 +65,7 @@
     <inertial>
       <origin rpy="0 0 0" xyz="0 0.001 0.001"/>
       <mass value="5.25e-4"/>
-      <inertia ixx="1e-3"  ixy="0"  ixz="0" iyy="1e-3" iyz="0" izz="1e-3" />
+      <inertia ixx="1e-3" ixy="0" ixz="0" iyy="1e-3" iyz="0" izz="1e-3"/>
     </inertial>
   </link>
 
@@ -86,11 +73,11 @@
   <joint name="pedestal_to_mid_stomach" type="fixed">
     <parent link="pedestal"/>
     <child link="mid_stomach"/>
-    <origin rpy="0 0 0"  xyz="0 0 0"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
   </joint>
 
 
-  <xacro:torso side="right" covers="yes" />
+  <xacro:torso side="right" covers="yes"/>
 
 
   <joint name="head_tilt" type="revolute">
@@ -113,10 +100,10 @@
   </joint>
 
 
-  <xacro:head covers="yes" />
+  <xacro:head covers="yes"/>
 
 
-  <xacro:face covers="yes" />
+  <xacro:face covers="yes"/>
 
 
   <joint name="face" type="fixed">
@@ -126,7 +113,7 @@
   </joint>
 
 
-  <xacro:arm side="right" flip="1" covers="yes" />
+  <xacro:arm side="right" flip="1" covers="yes"/>
 
 
   <joint name="right_shoulder_side" type="revolute">
@@ -139,7 +126,25 @@
   </joint>
 
 
-  <xacro:rhand side="right" neg="1" covers="yes" />
+  <xacro:rhand side="right" neg="1" covers="yes"/>
+
+
+  <link name="right_wrist_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://inmoov_meshes/meshes/virtual.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="cframe">
+        <color rgba="0.25 0.25 0.25 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0.001 0.001"/>
+      <mass value="5.25e-4"/>
+      <inertia ixx="1e-3" ixy="0" ixz="0" iyy="1e-3" iyz="0" izz="1e-3"/>
+    </inertial>
+  </link>
 
 
   <link name="right_wrist_link">
@@ -177,7 +182,11 @@
   </joint>
 
 
+<<<<<<< HEAD:inmoov_description/robots/inmoov.xacro
   <xacro:arm side="left" flip="-1" covers="yes" />
+=======
+  <xacro:arm side="left" flip="-1" covers="yes"/>
+>>>>>>> 634610668551a6d8b94040087a2017a49e50d6e6:inmoov_description/robots/inmoov_no_collision.urdf.xacro
 
 
   <joint name="left_shoulder_side" type="revolute">
@@ -190,7 +199,25 @@
   </joint>
 
 
-  <xacro:lhand side="left" neg="-1" covers="yes" />
+  <xacro:lhand side="left" neg="-1" covers="yes"/>
+
+
+  <link name="left_wrist_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://inmoov_meshes/meshes/virtual.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="cframe">
+        <color rgba="0.25 0.25 0.25 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0.001 0.001"/>
+      <mass value="5.25e-4"/>
+      <inertia ixx="1e-3" ixy="0" ixz="0" iyy="1e-3" iyz="0" izz="1e-3"/>
+    </inertial>
+  </link>
 
 
   <link name="left_wrist_link">
@@ -227,9 +254,13 @@
    <child link="left_hand"/>
   </joint>
 
+<<<<<<< HEAD:inmoov_description/robots/inmoov.xacro
   <xacro:include filename="$(find inmoov_description)/urdf/sensors.gazebo"/>  
+=======
+  <xacro:include filename="$(find inmoov_description)/urdf/emr_sensors.gazebo"/>  
+    
+>>>>>>> 634610668551a6d8b94040087a2017a49e50d6e6:inmoov_description/robots/inmoov_no_collision.urdf.xacro
   <xacro:include filename="$(find inmoov_description)/urdf/servos.urdf.xacro"/>
   <xacro:include filename="$(find inmoov_description)/urdf/materials.gazebo"/>
 
 </robot>
-
