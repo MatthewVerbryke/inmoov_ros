@@ -227,12 +227,9 @@
    <child link="left_hand"/>
   </joint>
 
-<<<<<<< HEAD
-  <xacro:include filename="$(find inmoov_description)/urdf/sensors.gazebo"/>  
-=======
+
   <xacro:include filename="$(find inmoov_description)/urdf/emr_sensors.gazebo"/>  
   <xacro:include filename="$(find inmoov_description)/urdf/contact_sensors.gazebo"/> 
->>>>>>> 634610668551a6d8b94040087a2017a49e50d6e6
   <xacro:include filename="$(find inmoov_description)/urdf/servos.urdf.xacro"/>
   <xacro:include filename="$(find inmoov_description)/urdf/materials.gazebo"/>
 
