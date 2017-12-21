@@ -2,55 +2,97 @@
 
 ## Summary
 
-This repository contains a *work-in-progress* InMoov software stack, being used for research into robotic dual-arm manipulation at the University Of Cincinnati's Autonomous Systems for S.P.A.C.E. R.O.B.O.T.I.C.S.* (AS4SR) lab: <https://github.com/AS4SR/general_info/wiki>
+This repository contains a *work-in-progress* InMoov software stack, being used for research into robotic dual-arm manipulation at the University Of Cincinnati's [Autonomous Systems for S.P.A.C.E. R.O.B.O.T.I.C.S.* (AS4SR) lab](https://github.com/AS4SR/general_info/wiki): 
 
-Currently, it contains the following:
- - Gazebo compatable URDF model of the InMoov robot, adapted from Alan Timm's Inmoov project:<https://github.com/alansrobotlab/inmoov_ros>
-   - Collision meshes based on .stl mesh files
+Currently, it contains the following features:
+ - A URDF model of the InMoov robot, adapted from Alan Timm's [Inmoov project](https://github.com/alansrobotlab/inmoov_ros):
+   - Collision and collision-less models
    - Estimated inertial, damping, and friction properties
-   - Transmission elements defined for all actuating joints
-   - Sensors implemented in Gazebo
- - Controllers implimented for all actuated joints
- - A node to replicate a physical InMoov robots finger movement (similar to mimicking in Rviz)
- - Basic MoveIt! integration
+ - Gazebo-compatability:
+   - Simulated sensors: visual cameras, kinect, contact sensors
+ - MoveIt! integration
 
-
-#### Sensors
- - Xbox Kinect 
- - Visual Cameras (one in each eye)
- - Contact Sensors (one in each fingertip)
-
-## Packages
-
- - inmoov_control
- - inmoov_description 
- - inmoov_firmware **not currently used**
- - inmoov_gazebo
- - inmoov_meshes
- - inmoov_moveit
- - inmoov_msgs **not currently used**
- - inmoov_tools **not currently used**
+###### *yes, an acronym within an acronym
 
 ## Recommended OS/Programs
 
 The software was developed and tested in:
  - Ubuntu 16.04 LTS
  - ROS Kinetic
- - Gazebo 7.0
+ - Gazebo 7.9
  - MoveIt! for ROS Kinetic
 
-## Current Issues
+## Installation
 
- - Inertial, damping, and friction values are estimates
- - Might not be able to simulate Passive Infrared (PIR) sensors in Gazebo
+To install the current version of this repository to your machine, cd into your catkin workspace source directory and clone the repository:
+
+```
+git clone https://github.com/MatthewVerbryke/inmoov_ros
+``` 
+
+## Usage
+
+### InMoov URDF 
+
+Several tools exist to help view and edit the InMoov's URDF model. If you want to edit the model, only modify the files that end with ```.urdf.xacro```, found in the ```inmoov_description/robots``` and ```inmoov_description/urdf``` folders. Generally, you will not want to edit the ```.urdf``` files directly, as they are auto-generated and are also harder to sift through than the subcomponent files. Additionally, note that the contents of the ```inmoov_description/urdf/no_collision``` directory and the file ```inmoov_no_collisions.urdf.xacro``` are auto-generated as well, and any changes here will get overwritten.
+
+After you are done editing, you can regenerate the complete urdf models, as well as collision-less xacro models, by switching into the ```inmoov_description/config``` directory, and running the autogeneration script:
+
+```
+./urdf_regen.sh
+```
+
+To launch a model of the InMoov in RViz from the top level directory, use:
+
+```
+roslaunch inmoov_description rviz.launch
+```
+
+### Gazebo
+
+To launch an empty world with only the InMoov robot in it, use:
+
+```
+roslaunch inmoov_gazebo inmoov_world.launch
+```
+
+To launch the collision-less model of the InMoov, use:
+
+```
+roslaunch inmoov_gazebo inmoov_no_collision_world.launch
+```
+
+### MoveIt
+
+**NOTE**: the MoveIt configuration for the InMoov is not fully completed, and changes may be made in the future.
+
+To launch the InMoov model in Rviz with MoveIt (using fake joint controllers), use:
+
+```
+roslaunch inmoov_moveit demo.launch
+```
+
+To simulate the InMoov in Gazebo while using the MoveIt RViz GUI, first launch the InMoov in an empty Gazebo world:
+
+```
+roslaunch inmoov_gazebo inmoov_world.launch
+```
+
+Once Gazebo has launched cleanly, in a new terminal, launch the MoveIt execution file:
+
+```
+roslaunch inmoov_moveit moveit_planning_execution.launch
+```
+
+## Notes
+
+ - Inertial, damping, and friction values are currently estimates; real values will be measured as a physical model is constructed.
+ - The packages ```inmoov_firmware```, ```inmoov_msgs```, ```inmoov_tools``` are not currently used.
 
 ## Future Work
 
- - Finish MoveIt! implimentation
  - Correction of inertial, damping, and friction values (based on experimntally determined values)
- - PID value adjustment?
- - VREP implimentation?
- - Add handpads for better grip?
+ - Hardware implementation
 
 ## License
 
@@ -59,5 +101,5 @@ All currently-used packages (see above) use the BSD 3-clause license presented i
 The original branch is Copyright (c) Alan Timm (alansrobotlab).
 All modifications are Copyright (c) University of Cincinnati.
 
-###### *yes, this is an acronym
+
 
